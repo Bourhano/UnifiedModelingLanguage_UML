@@ -22,12 +22,12 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="StockModelingSystemMain.classdiagram">
+    <Content Include="StockModelingSystemArchitecture.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="StockModelingSystemMain.classdiagram.layout">
+    <Content Include="StockModelingSystemArchitecture.classdiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>StockModelingSystemMain.classdiagram</DependentUpon>
+      <DependentUpon>StockModelingSystemArchitecture.classdiagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\StockManagementSystem.uml">
