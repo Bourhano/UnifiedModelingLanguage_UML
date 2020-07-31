@@ -187,7 +187,7 @@
       <class Id="a87e42a9-e353-4f0f-9f84-f2b78bbb597a" name="Properties Set" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5" />
         <targetEnds>
-          <association Id="809e39d9-a5fa-426c-b452-6e540f8d0d49" isDerived="false" sourceEndRoleName="Properties Set" targetEndRoleName="Property" isLeaf="false" isAbstract="false">
+          <association Id="809e39d9-a5fa-426c-b452-6e540f8d0d49" isDerived="false" sourceEndRoleName="Properties Set" targetEndRoleName="Property" isLeaf="false" name="defines value of" isAbstract="false">
             <classMoniker Id="5f4ef295-0835-4d22-a443-737fb741b87b" LastKnownName="Property" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -225,7 +225,7 @@
       <class Id="5f4ef295-0835-4d22-a443-737fb741b87b" name="Property" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="1df7a913-24b9-4bd7-83c5-cac50141ca0e" />
         <targetEnds>
-          <association Id="5ef21730-426f-428a-96bd-9ea67d868421" isDerived="false" sourceEndRoleName="Property" targetEndRoleName="Property Format" isLeaf="false" isAbstract="false">
+          <association Id="5ef21730-426f-428a-96bd-9ea67d868421" isDerived="false" sourceEndRoleName="Property" targetEndRoleName="Property Format" isLeaf="false" name="defined by" isAbstract="false">
             <classMoniker Id="e933ce6a-16a1-494a-918a-6a15a7e5eea6" LastKnownName="Property Format" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>

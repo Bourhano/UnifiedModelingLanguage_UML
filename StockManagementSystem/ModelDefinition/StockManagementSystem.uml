@@ -398,6 +398,7 @@
             sourceEndRoleName="Property"
             targetEndRoleName="Property Format"
             isLeaf="false"
+            name="defined by"
             isAbstract="false">
             <classMoniker
               Id="0399020b-072e-4734-af7c-54f9b5ff4529"
@@ -591,6 +592,7 @@
             sourceEndRoleName="Properties Set"
             targetEndRoleName="Property"
             isLeaf="false"
+            name="defines value of"
             isAbstract="false">
             <classMoniker
               Id="1df7a913-24b9-4bd7-83c5-cac50141ca0e"
