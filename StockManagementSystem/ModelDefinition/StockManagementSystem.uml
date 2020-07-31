@@ -133,6 +133,17 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="54e60c3a-cb4a-4dcc-b722-7bff9524be27"
+            name="address"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -143,6 +154,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="92038b43-9f5a-49e2-ae39-87fa83ba5612"
+            isDerived="false"
+            sourceEndRoleName="Item"
+            targetEndRoleName="Type"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="51bdeec4-625c-4b30-be4f-6c09c274c0b8"
+              LastKnownName="Type"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c01809d4-c280-425c-a286-805d41749911"
+                  name="Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d44f4ad5-0218-43a0-8d3c-9ccf6a0a8aeb"
+                  name="Type"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="ce6b0b1a-1b9d-44f1-8eb3-b1581d2ba21b"
@@ -230,6 +282,99 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="6549de90-4bd9-4e2b-801e-57155e2156b9"
+            isDerived="false"
+            sourceEndRoleName="Property"
+            targetEndRoleName="Property Format"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0399020b-072e-4734-af7c-54f9b5ff4529"
+              LastKnownName="Property Format"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ed5da9ac-120b-411e-af0e-747c9f376739"
+                  name="Property"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="efbb6393-d246-408a-ac9c-97923f87a5c2"
+                  name="Property Format"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6fe6bbf3-b9e6-4f09-a725-89fab2984db5"
+            isDerived="false"
+            sourceEndRoleName="Property"
+            targetEndRoleName="Properties Set"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5"
+              LastKnownName="Properties Set"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9147adb0-a1c1-4112-a45e-84edc6079f8b"
+                  name="Property"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="38127dbf-bc7d-46a2-95ae-9adf4265d8f5"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="88f968a2-eb41-42bc-a763-816033039d75"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e0fc95a3-cc7e-4bd5-817a-cf03a17744f0"
+                  name="Properties Set"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="6bed5f13-7762-44d3-afa2-d2b137f23274"
@@ -265,6 +410,113 @@
           <property
             Id="e0c6f67f-7cd9-45b3-8774-6628b4d739ab"
             name="propertyValues"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="51bdeec4-625c-4b30-be4f-6c09c274c0b8"
+        name="Type"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="e11b19c2-195b-464a-872f-14ab571d9eb1"
+            name="typeName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7c3e9369-83f7-40f4-add8-f58516a6ae1c"
+            name="category"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5"
+        name="Properties Set"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="330d6358-f317-4d97-a51b-326f85906d56"
+            isDerived="false"
+            sourceEndRoleName="Properties Set"
+            targetEndRoleName="Type"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="51bdeec4-625c-4b30-be4f-6c09c274c0b8"
+              LastKnownName="Type"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="94587e38-2020-4e4a-bbcc-4263218e8836"
+                  name="Properties Set"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="84e0c0ec-6333-44ea-b38c-e0f03fd63998"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="05bb6b25-b6c4-4b56-94b6-20ca2c1a855c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5d738546-91ae-44f7-8e16-c7bb4ce25563"
+                  name="Type"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="faf06467-b2c7-4175-a55c-54166b759acc"
+            name="propertyValue&lt;Dictionnary&gt;"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
