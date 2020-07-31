@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="87b48e94-f748-4063-99e0-21a034f99a53" name="StockModelingSystemArchitecture" linkedPackageId="605fbae3-f340-40fe-8fe5-8eb370c3e376" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="1df638f4-541c-4603-b726-b6ae735d1c82">
+      <elementDefinition Id="d5b0dc92-8c5e-4c1e-b183-4af8dd8bc5d3" />
+      <body>outDate and outDestination are filled upon removal</body>
+      <annotatedElements>
+        <classMoniker Id="bbc24bd8-6760-405b-a1e6-350b5e410377" LastKnownName="Item" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances Id="1c9de092-8543-4bdf-9d30-66398015e5f2">
       <profileInstance Id="5b1d9f78-7661-4805-859b-c3f1d43efe22" name="StandardProfileL2">
@@ -12,6 +21,12 @@
         <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
       </profileInstance>
       <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="bee5c380-a473-416e-9808-7337a1f428ae">
+      <profileInstance Id="c93dfbfd-e86f-4980-8764-c6c9b19d052e" name="TextTemplateBindings">
+        <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
+      </profileInstance>
+      <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
@@ -30,8 +45,9 @@
         <description>This is the main company.</description>
         <elementDefinition Id="c81f79d9-4a0b-462b-8724-89280efc8f04" />
         <targetEnds>
-          <association Id="c7606fb2-8bb7-488f-8312-4aaaf3dad1b5" isDerived="false" sourceEndRoleName="Company" targetEndRoleName="Branch" isLeaf="false" isAbstract="false">
+          <association Id="c7606fb2-8bb7-488f-8312-4aaaf3dad1b5" isDerived="false" sourceEndRoleName="Company" targetEndRoleName="Branch" isLeaf="false" name="contains" isAbstract="false">
             <classMoniker Id="fe7a5eef-1f06-4517-b221-689aea888d87" LastKnownName="Branch" />
+            <description>Associating the Company to its Branches</description>
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="6832b642-a8bf-4cff-acc8-19e49b9deb18" name="Company" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
@@ -60,6 +76,34 @@
         <ownedAttributesInternal>
           <property Id="01228af3-ef7c-4498-81c9-37ad7561f688" name="name" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="186e2c8f-7398-42d7-9a80-bd3e3e2ddbdc" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bbc24bd8-6760-405b-a1e6-350b5e410377" name="Item" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="006ee690-0257-417d-b711-36d1e6915722" />
+        <ownedAttributesInternal>
+          <property Id="aa46d092-5df7-4796-9e88-781515f53616" name="reference" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ce6b0b1a-1b9d-44f1-8eb3-b1581d2ba21b" />
+          </property>
+          <property Id="10693218-f4e9-4993-90bb-8f4ea9dc3500" name="quantity" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="69e64a03-0bb9-4e8b-8943-c61153ddb004" />
+          </property>
+          <property Id="22cf7d95-3ce5-49ed-a7b3-4c67192ed6f5" name="entryDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dffd817b-08e0-4acf-bb83-07e5b15b8e0d" />
+          </property>
+          <property Id="51a13842-73e7-4392-838d-c953392b2ac5" name="outDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="39d2036d-d909-47fd-b1eb-93ded3f0814c" />
+          </property>
+          <property Id="383d1a84-e139-4a51-ad4a-24f734d02d2f" name="entryOrigin" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9598cb44-0cdf-4903-bc20-41bd1f5ba355" />
+          </property>
+          <property Id="e2bbfe60-6ada-4403-bb44-1902e8707bd9" name="outDestination" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a3484a8f-43cb-4cf0-b46f-7db005249f19" />
+          </property>
+          <property Id="2f33dfce-064d-48bb-9576-3d61ab0e5de3" name="entryUser" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ab2eec1b-bd3a-4e6f-9001-0d44e2738584" />
           </property>
         </ownedAttributesInternal>
       </class>

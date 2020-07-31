@@ -3,6 +3,18 @@
   dslVersion="1.0.0.0"
   Id="fc60c8e6-7ae5-4030-8055-34d885e91f60"
   name="StockManagementSystem" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="d5b0dc92-8c5e-4c1e-b183-4af8dd8bc5d3">
+      <body>outDate and outDestination are filled upon removal</body>
+      <annotatedElements>
+        <classMoniker
+          Id="006ee690-0257-417d-b711-36d1e6915722"
+          LastKnownName="Item"
+          LastKnownLocation="StockManagementSystem.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -16,6 +28,12 @@
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
     </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="b9f9459f-b719-4485-a0a2-c081bcbad78b">
+      <profileInstance
+        Id="a7894ac9-2499-4316-8111-f767aab6d77c"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
@@ -26,10 +44,227 @@
         isLeaf="false"
         isActiveClass="false">
         <description>This is the main company.</description>
+        <targetEnds>
+          <association
+            Id="5b9e46af-3fdb-499c-8261-66ddac074c39"
+            isDerived="false"
+            sourceEndRoleName="Company"
+            targetEndRoleName="Branch"
+            isLeaf="false"
+            name="contains"
+            isAbstract="false">
+            <classMoniker
+              Id="eb8307ec-f1d6-48aa-9040-d65b948d8312"
+              LastKnownName="Branch"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <description>Associating the Company to its Branches</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fabe6822-0daf-4782-8335-a73f8cbac2c9"
+                  name="Company"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5e6debb2-dbcb-4668-a2cc-ac37a4c10f1c"
+                  name="Branch"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isUnique="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="196ff01a-9ae4-42b8-a796-ac7b87ab217d"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="03a7c79f-a4c8-4bb9-b51c-c040a1e2c9ae"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="186e2c8f-7398-42d7-9a80-bd3e3e2ddbdc"
             name="name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="eb8307ec-f1d6-48aa-9040-d65b948d8312"
+        name="Branch"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="515564bc-b5fd-49be-98af-dd20fbb60a96"
+            name="branchName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="006ee690-0257-417d-b711-36d1e6915722"
+        name="Item"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ce6b0b1a-1b9d-44f1-8eb3-b1581d2ba21b"
+            name="reference"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="69e64a03-0bb9-4e8b-8943-c61153ddb004"
+            name="quantity"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="dffd817b-08e0-4acf-bb83-07e5b15b8e0d"
+            name="entryDate"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="39d2036d-d909-47fd-b1eb-93ded3f0814c"
+            name="outDate"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9598cb44-0cdf-4903-bc20-41bd1f5ba355"
+            name="entryOrigin"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a3484a8f-43cb-4cf0-b46f-7db005249f19"
+            name="outDestination"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ab2eec1b-bd3a-4e6f-9001-0d44e2738584"
+            name="entryUser"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1df7a913-24b9-4bd7-83c5-cac50141ca0e"
+        name="Property"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="6bed5f13-7762-44d3-afa2-d2b137f23274"
+            name="propertyName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0399020b-072e-4734-af7c-54f9b5ff4529"
+        name="Property Format"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="9c4bc3e1-389b-4e08-8ce4-6096f61f1935"
+            name="formatName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e0c6f67f-7cd9-45b3-8774-6628b4d739ab"
+            name="propertyValues"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
