@@ -51,7 +51,7 @@
             sourceEndRoleName="Company"
             targetEndRoleName="Branch"
             isLeaf="false"
-            name="contains"
+            name="opened"
             isAbstract="false">
             <classMoniker
               Id="eb8307ec-f1d6-48aa-9040-d65b948d8312"
@@ -122,6 +122,61 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="6c89e58b-3258-43c2-8d6a-a5db2be3055e"
+            isDerived="false"
+            sourceEndRoleName="Branch"
+            targetEndRoleName="Item"
+            isLeaf="false"
+            name="stocks"
+            isAbstract="false">
+            <classMoniker
+              Id="006ee690-0257-417d-b711-36d1e6915722"
+              LastKnownName="Item"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9a8941db-c66c-41fb-82ed-a8d73a94702c"
+                  name="Branch"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fa18d90f-d1a2-4710-a261-cbbb320627ff"
+                  name="Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="be8cecfd-6a4e-4943-a7d9-c181f7969419"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b508b77a-a264-407a-9de1-af47d14e3b11"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="515564bc-b5fd-49be-98af-dd20fbb60a96"
@@ -161,6 +216,7 @@
             sourceEndRoleName="Item"
             targetEndRoleName="Type"
             isLeaf="false"
+            name="has a"
             isAbstract="false">
             <classMoniker
               Id="51bdeec4-625c-4b30-be4f-6c09c274c0b8"
@@ -191,6 +247,59 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e2e7c5b7-ab1e-49da-a304-2b11b432a8d7"
+            isDerived="false"
+            sourceEndRoleName="Item"
+            targetEndRoleName="Property"
+            isLeaf="false"
+            name="characterized by"
+            isAbstract="false">
+            <classMoniker
+              Id="1df7a913-24b9-4bd7-83c5-cac50141ca0e"
+              LastKnownName="Property"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="901f1a0a-622e-4f93-9d3a-c5925eb4bb10"
+                  name="Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="10f83aa1-dd34-42e5-abaf-93aa0836b873"
+                  name="Property"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="962cfb13-60ae-4cb4-bf67-5f9386272cfd"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c3e86a7d-306d-44a6-b671-a3d35edc9285"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -318,59 +427,20 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="6fe6bbf3-b9e6-4f09-a725-89fab2984db5"
-            isDerived="false"
-            sourceEndRoleName="Property"
-            targetEndRoleName="Properties Set"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5"
-              LastKnownName="Properties Set"
-              LastKnownLocation="StockManagementSystem.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="9147adb0-a1c1-4112-a45e-84edc6079f8b"
-                  name="Property"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
+                  isComposite="true">
                   <lowerValueInternal>
                     <literalString
-                      Id="38127dbf-bc7d-46a2-95ae-9adf4265d8f5"
+                      Id="f7cdbda6-0782-44e6-8baf-fd4d902de897"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="88f968a2-eb41-42bc-a763-816033039d75"
+                      Id="c748a3bd-d5c4-4060-90b5-b610d8316274"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
                 </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="e0fc95a3-cc7e-4bd5-817a-cf03a17744f0"
-                  name="Properties Set"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -427,6 +497,61 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="ccc96223-1938-4a2c-b05b-5ea416115434"
+            isDerived="false"
+            sourceEndRoleName="Type"
+            targetEndRoleName="Properties Set"
+            isLeaf="false"
+            name="characterized by"
+            isAbstract="false">
+            <classMoniker
+              Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5"
+              LastKnownName="Properties Set"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3cf7783f-5a60-4b63-80a2-ba099d1e87d1"
+                  name="Type"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ab2938c6-b481-4316-85ff-cf549c8bd346"
+                  name="Properties Set"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="66c2b88a-eb65-40c6-8122-d1335a5a8f09"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="362b2bb9-3727-48f2-bdeb-b367c5ce6e19"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="e11b19c2-195b-464a-872f-14ab571d9eb1"
@@ -461,20 +586,20 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="330d6358-f317-4d97-a51b-326f85906d56"
+            Id="a96a7a13-f6a1-4954-aeb2-a699447d8e65"
             isDerived="false"
             sourceEndRoleName="Properties Set"
-            targetEndRoleName="Type"
+            targetEndRoleName="Property"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="51bdeec4-625c-4b30-be4f-6c09c274c0b8"
-              LastKnownName="Type"
+              Id="1df7a913-24b9-4bd7-83c5-cac50141ca0e"
+              LastKnownName="Property"
               LastKnownLocation="StockManagementSystem.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="94587e38-2020-4e4a-bbcc-4263218e8836"
+                  Id="3d29d054-aea5-4e71-93fc-55843dac1572"
                   name="Properties Set"
                   isLeaf="false"
                   isStatic="false"
@@ -483,32 +608,32 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="84e0c0ec-6333-44ea-b38c-e0f03fd63998"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="05bb6b25-b6c4-4b56-94b6-20ca2c1a855c"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
+                  isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="5d738546-91ae-44f7-8e16-c7bb4ce25563"
-                  name="Type"
+                  Id="6ffdbb99-6a4a-4a49-b35e-a9188cda01a1"
+                  name="Property"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="01996539-f22f-424e-a3e3-5867182eac23"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5cf2aa84-01fd-4ed9-befa-cb6d3bdff7aa"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
