@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="87b48e94-f748-4063-99e0-21a034f99a53" name="StockModelingSystemArchitecture" linkedPackageId="605fbae3-f340-40fe-8fe5-8eb370c3e376" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="1c9de092-8543-4bdf-9d30-66398015e5f2">
+      <profileInstance Id="5b1d9f78-7661-4805-859b-c3f1d43efe22" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="887ad42d-44d9-4f08-b431-5f623b2ff059">
+      <profileInstance Id="0618cadb-8362-48da-a674-876029d7f7f3" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fe7a5eef-1f06-4517-b221-689aea888d87" name="Branch" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="eb8307ec-f1d6-48aa-9040-d65b948d8312" />
+        <ownedAttributesInternal>
+          <property Id="d698fab3-8737-4b16-8d58-e260d0b24de8" name="branchName" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="515564bc-b5fd-49be-98af-dd20fbb60a96" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="af681ff5-dd64-48d7-a1c7-91ec3cd0cdcd" name="Company" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <description>This is the main company.</description>
+        <elementDefinition Id="c81f79d9-4a0b-462b-8724-89280efc8f04" />
+        <targetEnds>
+          <association Id="c7606fb2-8bb7-488f-8312-4aaaf3dad1b5" isDerived="false" sourceEndRoleName="Company" targetEndRoleName="Branch" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fe7a5eef-1f06-4517-b221-689aea888d87" LastKnownName="Branch" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6832b642-a8bf-4cff-acc8-19e49b9deb18" name="Company" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fabe6822-0daf-4782-8335-a73f8cbac2c9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7051793e-d33c-4a1e-9ad9-6d5bb38aff11" name="Branch" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="3687b44d-719d-4636-9185-13db5d051948" name="Lower" value="0">
+                      <elementDefinition Id="196ff01a-9ae4-42b8-a796-ac7b87ab217d" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="63c7554c-c23c-4234-adb0-a4d59b9f48a6" name="Upper" value="*">
+                      <elementDefinition Id="03a7c79f-a4c8-4bb9-b51c-c040a1e2c9ae" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="5e6debb2-dbcb-4668-a2cc-ac37a4c10f1c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5b9e46af-3fdb-499c-8261-66ddac074c39" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="01228af3-ef7c-4498-81c9-37ad7561f688" name="name" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="186e2c8f-7398-42d7-9a80-bd3e3e2ddbdc" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="605fbae3-f340-40fe-8fe5-8eb370c3e376" name="StockManagementSystem">
+    <elementDefinition Id="fc60c8e6-7ae5-4030-8055-34d885e91f60" />
+  </package>
+</logicalClassDesignerModel>
