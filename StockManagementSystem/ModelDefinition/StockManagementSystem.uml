@@ -14,6 +14,36 @@
           LastKnownLocation="StockManagementSystem.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="3cc3eea5-c803-44e2-9215-534b000fe390">
+      <body>The field properties is common between components (Item) of the same type.</body>
+      <annotatedElements>
+        <classMoniker
+          Id="51bdeec4-625c-4b30-be4f-6c09c274c0b8"
+          LastKnownName="Type"
+          LastKnownLocation="StockManagementSystem.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="542e5ebc-0b48-467b-a483-b6224232548d">
+      <body>The Item itself conatains its main properties, before setting the properties values.</body>
+      <annotatedElements>
+        <classMoniker
+          Id="1df7a913-24b9-4bd7-83c5-cac50141ca0e"
+          LastKnownName="Property"
+          LastKnownLocation="StockManagementSystem.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="cf893dc1-c680-49b3-9a9b-05ce47e2fa81">
+      <body>Once a PropertiesSet is defined, user can no longer add properties to the Type</body>
+      <annotatedElements>
+        <classMoniker
+          Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5"
+          LastKnownName="PropertiesSet"
+          LastKnownLocation="StockManagementSystem.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -402,7 +432,7 @@
             isAbstract="false">
             <classMoniker
               Id="0399020b-072e-4734-af7c-54f9b5ff4529"
-              LastKnownName="Property Format"
+              LastKnownName="PropertyFormat"
               LastKnownLocation="StockManagementSystem.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -463,7 +493,7 @@
     <packageHasNamedElement>
       <class
         Id="0399020b-072e-4734-af7c-54f9b5ff4529"
-        name="Property Format"
+        name="PropertyFormat"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -509,7 +539,7 @@
             isAbstract="false">
             <classMoniker
               Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5"
-              LastKnownName="Properties Set"
+              LastKnownName="PropertiesSet"
               LastKnownLocation="StockManagementSystem.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -575,13 +605,24 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="69d1f198-56dd-4d8c-b245-1512cf94e8c4"
+            name="properties"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5"
-        name="Properties Set"
+        name="PropertiesSet"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -653,6 +694,13 @@
             isComposite="false" />
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ab8888cc-6174-4158-8765-356d9069b82d"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

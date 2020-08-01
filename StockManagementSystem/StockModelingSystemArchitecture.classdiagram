@@ -8,6 +8,27 @@
         <classMoniker Id="bbc24bd8-6760-405b-a1e6-350b5e410377" LastKnownName="Item" />
       </annotatedElements>
     </comment>
+    <comment Id="7abb438f-06e4-4b32-8842-a49e11570161">
+      <elementDefinition Id="3cc3eea5-c803-44e2-9215-534b000fe390" />
+      <body>The field properties is common between components (Item) of the same type.</body>
+      <annotatedElements>
+        <classMoniker Id="6a0ee4b7-e5ea-4af5-8205-5c87aa803334" LastKnownName="Type" />
+      </annotatedElements>
+    </comment>
+    <comment Id="3f0a2d43-3192-4fa5-868d-e2c46c207f56">
+      <elementDefinition Id="542e5ebc-0b48-467b-a483-b6224232548d" />
+      <body>The Item itself conatains its main properties, before setting the properties values.</body>
+      <annotatedElements>
+        <classMoniker Id="5f4ef295-0835-4d22-a443-737fb741b87b" LastKnownName="Property" />
+      </annotatedElements>
+    </comment>
+    <comment Id="830300af-8e6b-4d2f-9813-a79dd4591570">
+      <elementDefinition Id="cf893dc1-c680-49b3-9a9b-05ce47e2fa81" />
+      <body>Once a PropertiesSet is defined, user can no longer add properties to the Type</body>
+      <annotatedElements>
+        <classMoniker Id="a87e42a9-e353-4f0f-9f84-f2b78bbb597a" LastKnownName="PropertiesSet" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances Id="1c9de092-8543-4bdf-9d30-66398015e5f2">
@@ -184,7 +205,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="a87e42a9-e353-4f0f-9f84-f2b78bbb597a" name="Properties Set" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="a87e42a9-e353-4f0f-9f84-f2b78bbb597a" name="PropertiesSet" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5" />
         <targetEnds>
           <association Id="809e39d9-a5fa-426c-b452-6e540f8d0d49" isDerived="false" sourceEndRoleName="Properties Set" targetEndRoleName="Property" isLeaf="false" name="defines value of" isAbstract="false">
@@ -226,7 +247,7 @@
         <elementDefinition Id="1df7a913-24b9-4bd7-83c5-cac50141ca0e" />
         <targetEnds>
           <association Id="5ef21730-426f-428a-96bd-9ea67d868421" isDerived="false" sourceEndRoleName="Property" targetEndRoleName="Property Format" isLeaf="false" name="defined by" isAbstract="false">
-            <classMoniker Id="e933ce6a-16a1-494a-918a-6a15a7e5eea6" LastKnownName="Property Format" />
+            <classMoniker Id="e933ce6a-16a1-494a-918a-6a15a7e5eea6" LastKnownName="PropertyFormat" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="4e7704f3-15f9-47af-89c4-3377478e316e" name="Property" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
@@ -260,7 +281,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="e933ce6a-16a1-494a-918a-6a15a7e5eea6" name="Property Format" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="e933ce6a-16a1-494a-918a-6a15a7e5eea6" name="PropertyFormat" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="0399020b-072e-4734-af7c-54f9b5ff4529" />
         <ownedAttributesInternal>
           <property Id="45dd0d7d-40cc-4b35-a09c-f98102459aaa" name="formatName" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -277,7 +298,7 @@
         <elementDefinition Id="51bdeec4-625c-4b30-be4f-6c09c274c0b8" />
         <targetEnds>
           <association Id="83dfb424-467e-485b-9b16-0bfe350fbc17" isDerived="false" sourceEndRoleName="Type" targetEndRoleName="Properties Set" isLeaf="false" name="characterized by" isAbstract="false">
-            <classMoniker Id="a87e42a9-e353-4f0f-9f84-f2b78bbb597a" LastKnownName="Properties Set" />
+            <classMoniker Id="a87e42a9-e353-4f0f-9f84-f2b78bbb597a" LastKnownName="PropertiesSet" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="660b0a8f-5a32-4ee7-87dd-334f654224b7" name="Type" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -309,6 +330,9 @@
           </property>
           <property Id="66dcfcbc-da55-4157-a7ba-0d3c4f48a07e" name="category" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="7c3e9369-83f7-40f4-add8-f58516a6ae1c" />
+          </property>
+          <property Id="cb45b538-f548-410d-9e16-301b3cf79447" name="properties" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="69d1f198-56dd-4d8c-b245-1512cf94e8c4" />
           </property>
         </ownedAttributesInternal>
       </class>
