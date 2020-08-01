@@ -54,6 +54,16 @@
           LastKnownLocation="StockManagementSystem.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="4d42b635-14f4-48e5-bbe7-07ab0d0fba22">
+      <body>Creating a new Order is missing from the logic and requirements.</body>
+      <annotatedElements>
+        <classMoniker
+          Id="f44627d0-525d-431f-a3d5-3951451c1b81"
+          LastKnownName="Order"
+          LastKnownLocation="StockManagementSystem.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -266,6 +276,18 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="4e280ae8-caa1-4c5c-8c82-98c378cd9b4e"
+            name="associationProcedures"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -320,7 +342,7 @@
           </operation>
           <operation
             Id="06d16122-9745-49b9-9348-5a192cbc7df1"
-            name="associationProcedure"
+            name="createAssociationProcedure"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -329,20 +351,46 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d684208c-1758-4347-a872-719ff0cb5e66"
+                  Id="15f59f7b-5982-439a-8194-674536f2047b"
                   name="[]Item"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="9c18cd4c-89e6-44ce-8ef4-794eaff8f1e5"
+                  Id="ddbf498e-e69c-4d60-ac1c-2c5dce55dbfa"
                   name="[]Quantity"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="d186cb47-23f7-4125-8615-73161bf736bf"
+            name="executeAssociationProcedure"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0fa36fdc-1a0c-49f4-b250-c13be9c0fb30"
+                  name="procedureToRun"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9a848e60-8c62-467e-9679-20b59a1c368b"
+            name="addNewItem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -539,14 +587,21 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="db70c86c-02ff-4538-a6d6-847873c1b363"
+                  Id="f84c6d8a-b3b8-4663-82e1-2e4ee24643d8"
+                  name="ref"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="75746f81-2267-4bf6-8673-442a757fc9ac"
                   name="[]Property"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="aca418f6-05a6-4e51-938c-0dc417853390"
+                  Id="e02702a2-757f-45e0-8a8e-efd958f22f84"
                   name="[]propertyValue"
                   direction="In"
                   isUnique="false" />
@@ -555,7 +610,7 @@
           </operation>
           <operation
             Id="206ba16b-951e-48b5-9ac8-f644f8b01cc4"
-            name="createNewPropertiesSet"
+            name="addPropertiesSet"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -564,15 +619,41 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="1b20f361-c23e-47f8-b15e-5626795ef9a2"
+                  Id="b8d06db6-9176-4cda-b42c-0348351cd165"
                   name="[]Property"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b84a9990-47ec-44b8-bfe0-8298a6c4882e"
+                  Id="2be15f4f-dca9-4a41-9356-66d758cbb263"
                   name="[]propertyValue"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="452d4bcb-a580-41d9-8ecf-9af8d1d2e28f"
+            name="addNewProperty"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e3c040eb-e5c5-45bc-b34a-6c99c1e19c30"
+            name="createNewItem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a9ec302f-a43b-4140-88e1-e6b0c9014d2d"
+                  name="type"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -655,6 +736,16 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ebfc9f82-aa5c-49fe-84a2-a456478489b9"
+            name="createNewProperty"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -686,6 +777,16 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7d9c662b-f51e-4e46-8671-b079eb2438e7"
+            name="createNewPropertyFormat"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -793,6 +894,49 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="168baa94-8196-4e55-b8da-ce122e824e4f"
+            name="addNewProperty"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dc1ade8a-d045-46a3-854b-f35192fb9975"
+                  name="propertyToAdd"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0b48fe73-e045-4003-aa48-d2012bc55a0b"
+            name="createNewType"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0cd2d963-2727-47c2-b94f-a174988b6864"
+                  name="properties"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dd412415-c421-4aa1-883d-6e08edf70968"
+                  name="category"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -870,6 +1014,33 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="cf6cb7ff-b7f0-4f80-bb88-0f031e94ae23"
+            name="createNewPropertiesSet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b59547d0-5f37-4ebc-b3ce-216365d31165"
+                  name="[]Property"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2ccd3913-f55f-4c50-bd14-906b43d97d8e"
+                  name="[]propertyValue"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -886,7 +1057,7 @@
             sourceEndRoleName="Order"
             targetEndRoleName="Item"
             isLeaf="false"
-            name="requets"
+            name="requests"
             isAbstract="false">
             <classMoniker
               Id="006ee690-0257-417d-b711-36d1e6915722"
