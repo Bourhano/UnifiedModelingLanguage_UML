@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4ead3beb-6a36-4996-aabd-b2d732ca52a5" name="StockManagementSystem" linkedPackageId="ecf1380e-e4fa-4c54-b530-bd3d3222b5a7" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="147f5757-83e1-4435-90b4-51af6b5270f2">
+      <profileInstance Id="80897bd1-d6b3-4bee-bd78-4b71ccaa38cc" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="70ed79f5-48b1-4569-8e9e-8cbe6e3f32d6">
+      <profileInstance Id="2be81240-58c7-4b13-bb4f-c2172f05dae6" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="9964a062-2795-4758-b6cf-b3fbc03111e9">
+      <profileInstance Id="a00510d1-f990-4b0d-9fab-434bd74ebd0d" name="TextTemplateBindings">
+        <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
+      </profileInstance>
+      <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="42e2fe31-5bf4-4619-8183-db9e4402b3de" name="System" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c2ca5c42-07bf-4064-815c-39e104ca7da6" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b44be0de-f70d-4863-9d9b-4ebee822164c" name="AddNewItem" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="efe3a73b-c1aa-45c2-8616-ed1aeebcb69c" />
+        <additions>
+          <include Id="ae5127a2-a29b-4324-985c-6a4d0e85ac78">
+            <useCaseMoniker Id="210bf12c-cdcf-4e96-85c4-10b0d99c8a64" LastKnownName="ChooseAType" />
+            <elementDefinition Id="0868f509-f2b0-4322-a992-fb05e7659551" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="a723b084-14bd-4046-8e38-d135f940fc41" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8363dc58-3efe-49de-84f9-a5d0c4a8b094" />
+        <targetEnds>
+          <association Id="9d27af4c-5dc1-4275-88a7-683cc52e0eb0" isDerived="false" sourceEndRoleName="User" targetEndRoleName="AddNewItem" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b44be0de-f70d-4863-9d9b-4ebee822164c" LastKnownName="AddNewItem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0fb0c437-fff0-4b4c-a2f4-cbca46972893" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cf632484-c1c7-4e4b-a225-ad081bea52f9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="259f9611-e7e1-49f9-bae8-3fb394c7e9aa" name="AddNewItem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3fc5aa52-ca41-4a0b-92fa-3a0310bbeb34" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ec04cbf3-6d86-4991-8209-4a0550d082bb" />
+          </association>
+          <association Id="5093fd48-393d-4e0f-8e89-cb9bc2bf09cd" isDerived="false" sourceEndRoleName="User" targetEndRoleName="CreateNewProperty" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b215d445-47e1-4c1f-a689-3b25c554ccd2" LastKnownName="CreateNewProperty" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92d8d98f-ae95-4790-b30d-c7987b17efaa" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d2e0043c-c38f-477c-8a1c-3ea755124b2e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="38ca915d-33f2-4a54-805f-86a7a0aba551" name="CreateNewProperty" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8b662df6-4f81-437d-8f9a-01b70bdefd17" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e3d34fbf-bb40-432c-895c-3f58acd25f61" />
+          </association>
+          <association Id="74972899-1911-4e30-851e-da832dbe05e9" isDerived="false" sourceEndRoleName="User" targetEndRoleName="CreateNewPropertyFormat" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d8cd39de-b7ec-4d9f-aad6-8235a02b5309" LastKnownName="CreateNewPropertyFormat" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="94c3a894-0862-4197-9d60-5627031006a3" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4822fc54-1212-4158-bc38-201617794023" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="59c06c32-4ff6-460a-bfd0-2be6b09fbace" name="CreateNewPropertyFormat" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="233b7daf-20e8-4062-9d67-67b5da1695ce" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9632167e-d1e3-4932-b92a-d5723b24271c" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="210bf12c-cdcf-4e96-85c4-10b0d99c8a64" name="ChooseAType" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6183f2cc-76a3-423d-97cd-3ac131863d29" />
+        <extendedCases>
+          <extend Id="1763a0a4-2da3-40af-aef9-73b576ec1130">
+            <useCaseMoniker Id="95551f81-00f1-47bc-8db3-2feb7b1feeb8" LastKnownName="AddNewType" />
+            <elementDefinition Id="3bd35304-a646-47ef-b6db-6f5c4b6e522a" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="95551f81-00f1-47bc-8db3-2feb7b1feeb8" name="AddNewType" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1d05813b-f2a3-433d-b11d-75d1f395eca7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b215d445-47e1-4c1f-a689-3b25c554ccd2" name="CreateNewProperty" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9cde1a39-8454-4125-a26b-071573ef3975" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d8cd39de-b7ec-4d9f-aad6-8235a02b5309" name="CreateNewPropertyFormat" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d24f4d9d-b7a8-4e43-be3d-4b6d8a3446e9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="ecf1380e-e4fa-4c54-b530-bd3d3222b5a7" name="StockManagementSystem">
+    <elementDefinition Id="fc60c8e6-7ae5-4030-8055-34d885e91f60" />
+  </package>
+</useCaseModelRoot>

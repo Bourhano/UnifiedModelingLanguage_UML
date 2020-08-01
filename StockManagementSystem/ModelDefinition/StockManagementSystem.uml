@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="fc60c8e6-7ae5-4030-8055-34d885e91f60"
   name="StockManagementSystem" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1179,6 +1179,195 @@
           </operation>
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="c2ca5c42-07bf-4064-815c-39e104ca7da6"
+        name="System"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="efe3a73b-c1aa-45c2-8616-ed1aeebcb69c"
+        name="AddNewItem"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="0868f509-f2b0-4322-a992-fb05e7659551">
+            <useCaseMoniker
+              Id="6183f2cc-76a3-423d-97cd-3ac131863d29"
+              LastKnownName="ChooseAType"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="8363dc58-3efe-49de-84f9-a5d0c4a8b094"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ec04cbf3-6d86-4991-8209-4a0550d082bb"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="AddNewItem"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="efe3a73b-c1aa-45c2-8616-ed1aeebcb69c"
+              LastKnownName="AddNewItem"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf632484-c1c7-4e4b-a225-ad081bea52f9"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3fc5aa52-ca41-4a0b-92fa-3a0310bbeb34"
+                  name="AddNewItem"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e3d34fbf-bb40-432c-895c-3f58acd25f61"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="CreateNewProperty"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="9cde1a39-8454-4125-a26b-071573ef3975"
+              LastKnownName="CreateNewProperty"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d2e0043c-c38f-477c-8a1c-3ea755124b2e"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8b662df6-4f81-437d-8f9a-01b70bdefd17"
+                  name="CreateNewProperty"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9632167e-d1e3-4932-b92a-d5723b24271c"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="CreateNewPropertyFormat"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d24f4d9d-b7a8-4e43-be3d-4b6d8a3446e9"
+              LastKnownName="CreateNewPropertyFormat"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4822fc54-1212-4158-bc38-201617794023"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="233b7daf-20e8-4062-9d67-67b5da1695ce"
+                  name="CreateNewPropertyFormat"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6183f2cc-76a3-423d-97cd-3ac131863d29"
+        name="ChooseAType"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="3bd35304-a646-47ef-b6db-6f5c4b6e522a">
+            <useCaseMoniker
+              Id="1d05813b-f2a3-433d-b11d-75d1f395eca7"
+              LastKnownName="AddNewType"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1d05813b-f2a3-433d-b11d-75d1f395eca7"
+        name="AddNewType"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9cde1a39-8454-4125-a26b-071573ef3975"
+        name="CreateNewProperty"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d24f4d9d-b7a8-4e43-be3d-4b6d8a3446e9"
+        name="CreateNewPropertyFormat"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
