@@ -44,6 +44,16 @@
           LastKnownLocation="StockManagementSystem.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="06169997-4775-424a-9db6-784bfab22275">
+      <body>Each Item has its own PropertiesSet reference. That's why each Type contains multiple PropertiesSet</body>
+      <annotatedElements>
+        <classMoniker
+          Id="006ee690-0257-417d-b711-36d1e6915722"
+          LastKnownName="Item"
+          LastKnownLocation="StockManagementSystem.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -81,7 +91,7 @@
             sourceEndRoleName="Company"
             targetEndRoleName="Branch"
             isLeaf="false"
-            name="opened"
+            name="opens"
             isAbstract="false">
             <classMoniker
               Id="eb8307ec-f1d6-48aa-9040-d65b948d8312"
@@ -143,6 +153,33 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="91f49d25-f720-4a97-8bee-35d3df8a82ac"
+            name="addNewBranch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8c127187-98f9-4bf1-b75d-777a03f00cc1"
+                  name="name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4ce9aad7-c826-4e93-83e7-05b6588d2813"
+                  name="address"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -230,6 +267,83 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="95c23da1-657a-464b-8f46-736f68c09bcd"
+            name="addQuantity"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="11dd9ec5-2743-418b-ad6d-47c973834248"
+                  name="refence"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="055a9fb3-333f-4243-85ab-0aa4a08373e7"
+                  name="qtyToAdd"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d40f5b43-fa4e-47a8-b42e-da3719078138"
+            name="exitQuantity"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6fc8d053-d496-4dba-be77-4ed7278b2816"
+                  name="reference"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a3646a9f-c855-4fea-b275-6924d828b789"
+                  name="qtyToExit"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="06d16122-9745-49b9-9348-5a192cbc7df1"
+            name="associationProcedure"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d684208c-1758-4347-a872-719ff0cb5e66"
+                  name="[]Item"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9c18cd4c-89e6-44ce-8ef4-794eaff8f1e5"
+                  name="[]Quantity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -338,6 +452,7 @@
           <property
             Id="ce6b0b1a-1b9d-44f1-8eb3-b1581d2ba21b"
             name="reference"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -412,6 +527,58 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="93667316-0cc3-4eb1-9a7c-896e92df7fca"
+            name="changePropertiesValues"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="db70c86c-02ff-4538-a6d6-847873c1b363"
+                  name="[]Property"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aca418f6-05a6-4e51-938c-0dc417853390"
+                  name="[]propertyValue"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="206ba16b-951e-48b5-9ac8-f644f8b01cc4"
+            name="createNewPropertiesSet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1b20f361-c23e-47f8-b15e-5626795ef9a2"
+                  name="[]Property"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b84a9990-47ec-44b8-bfe0-8298a6c4882e"
+                  name="[]propertyValue"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -607,7 +774,7 @@
             isComposite="false" />
           <property
             Id="69d1f198-56dd-4d8c-b245-1512cf94e8c4"
-            name="properties"
+            name="properties&lt;Property&gt;"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -617,6 +784,16 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="88e449a5-63a8-4164-b70b-db6905d9cda8"
+            name="applyToAllItems"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -684,7 +861,7 @@
         <ownedAttributesInternal>
           <property
             Id="faf06467-b2c7-4175-a55c-54166b759acc"
-            name="propertyValue&lt;Dictionnary&gt;"
+            name="propertyValue(Dictionnary&lt;Property:value&gt;)"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -696,11 +873,141 @@
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <Interface
-        Id="ab8888cc-6174-4158-8765-356d9069b82d"
-        name="Interface1"
+      <class
+        Id="f44627d0-525d-431f-a3d5-3951451c1b81"
+        name="Order"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="0c122235-57c5-464f-bd32-6721d03b20f8"
+            isDerived="false"
+            sourceEndRoleName="Order"
+            targetEndRoleName="Item"
+            isLeaf="false"
+            name="requets"
+            isAbstract="false">
+            <classMoniker
+              Id="006ee690-0257-417d-b711-36d1e6915722"
+              LastKnownName="Item"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b43d7a74-d913-49de-9bcc-946fd77c784a"
+                  name="Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="feb8e555-1869-4a48-afed-053022964665"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a99f76d9-3af2-49ab-8cb2-ec08358e0b7a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bfbbfb29-067d-4238-841d-0bab76f6a0d6"
+                  name="Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="30aab2fc-653b-4f1a-8622-f3e90b0ef4f5"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ea0acd23-d881-41dc-9031-6ad3b17ccff2"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="0f6cc8a1-0cd8-481b-a57d-6096a00e4461"
+            name="[]quantities"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a3fd31b6-e541-437c-a2ed-4acdb2edb9a5"
+            name="[]references"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="109e72fc-284e-4b0e-9704-8ee687760fb9"
+            name="editOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0f84170a-b163-4b7f-a3e5-1633334d4c93"
+                  name="ref orderText"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0fa320ac-37b2-489d-8ac5-69ea4401a9fb"
+            name="executeOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="53e10beb-79c5-461a-b4c9-7288a49db27b"
+                  name="orderText"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

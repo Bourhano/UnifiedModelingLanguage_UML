@@ -29,6 +29,13 @@
         <classMoniker Id="a87e42a9-e353-4f0f-9f84-f2b78bbb597a" LastKnownName="PropertiesSet" />
       </annotatedElements>
     </comment>
+    <comment Id="3d0f0dc4-b116-4cdd-987f-59a3ce5ab5c4">
+      <elementDefinition Id="06169997-4775-424a-9db6-784bfab22275" />
+      <body>Each Item has its own PropertiesSet reference. That's why each Type contains multiple PropertiesSet</body>
+      <annotatedElements>
+        <classMoniker Id="bbc24bd8-6760-405b-a1e6-350b5e410377" LastKnownName="Item" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances Id="1c9de092-8543-4bdf-9d30-66398015e5f2">
@@ -90,6 +97,53 @@
             <elementDefinition Id="54e60c3a-cb4a-4dcc-b722-7bff9524be27" />
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="5d058526-da46-47ef-b46c-dcd20e3fdbfd" name="addQuantity" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="95c23da1-657a-464b-8f46-736f68c09bcd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2d664fe4-467f-4ee9-9f56-48e1dc4afd9e" name="refence" direction="In" isUnique="false">
+                  <elementDefinition Id="11dd9ec5-2743-418b-ad6d-47c973834248" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="115cbdfd-ed44-44ae-b499-c0c54934bca5" name="qtyToAdd" direction="In" isUnique="false">
+                  <elementDefinition Id="055a9fb3-333f-4243-85ab-0aa4a08373e7" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bf6f260e-00e6-4d10-a329-1e4d421e3609" name="exitQuantity" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d40f5b43-fa4e-47a8-b42e-da3719078138" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a1ac58ff-7cf5-4c68-8eef-92fed91e62ba" name="reference" direction="In" isUnique="false">
+                  <elementDefinition Id="6fc8d053-d496-4dba-be77-4ed7278b2816" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="96460b1f-ef0f-4445-bdfb-e67da8db5dc1" name="qtyToExit" direction="In" isUnique="false">
+                  <elementDefinition Id="a3646a9f-c855-4fea-b275-6924d828b789" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="121d21fa-f1f4-4bdd-9f71-8e5a7411dd23" name="associationProcedure" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="06d16122-9745-49b9-9348-5a192cbc7df1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e87dbf28-7328-4d0e-a79c-d7a31160aa43" name="[]Item" direction="In" isUnique="false">
+                  <elementDefinition Id="d684208c-1758-4347-a872-719ff0cb5e66" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="34a74a02-62d8-40e1-a8b6-d19df7e1332f" name="[]Quantity" direction="In" isUnique="false">
+                  <elementDefinition Id="9c18cd4c-89e6-44ce-8ef4-794eaff8f1e5" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -97,7 +151,7 @@
         <description>This is the main company.</description>
         <elementDefinition Id="c81f79d9-4a0b-462b-8724-89280efc8f04" />
         <targetEnds>
-          <association Id="c7606fb2-8bb7-488f-8312-4aaaf3dad1b5" isDerived="false" sourceEndRoleName="Company" targetEndRoleName="Branch" isLeaf="false" name="opened" isAbstract="false">
+          <association Id="c7606fb2-8bb7-488f-8312-4aaaf3dad1b5" isDerived="false" sourceEndRoleName="Company" targetEndRoleName="Branch" isLeaf="false" name="opens" isAbstract="false">
             <classMoniker Id="fe7a5eef-1f06-4517-b221-689aea888d87" LastKnownName="Branch" />
             <description>Associating the Company to its Branches</description>
             <relationshipOwnedElementsInternal>
@@ -130,6 +184,23 @@
             <elementDefinition Id="186e2c8f-7398-42d7-9a80-bd3e3e2ddbdc" />
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1cc5fce6-c55e-480b-8129-c89097c5350d" name="addNewBranch" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="91f49d25-f720-4a97-8bee-35d3df8a82ac" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8526fc7e-133c-4d9b-a2f7-e34bad371d35" name="name" direction="In" isUnique="false">
+                  <elementDefinition Id="8c127187-98f9-4bf1-b75d-777a03f00cc1" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="97840c82-c970-4fc5-9327-7c03ba85f4c9" name="address" direction="In" isUnique="false">
+                  <elementDefinition Id="4ce9aad7-c826-4e93-83e7-05b6588d2813" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -180,7 +251,7 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="aa46d092-5df7-4796-9e88-781515f53616" name="reference" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="aa46d092-5df7-4796-9e88-781515f53616" name="reference" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="ce6b0b1a-1b9d-44f1-8eb3-b1581d2ba21b" />
           </property>
           <property Id="10693218-f4e9-4993-90bb-8f4ea9dc3500" name="quantity" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -202,6 +273,38 @@
             <elementDefinition Id="ab2eec1b-bd3a-4e6f-9001-0d44e2738584" />
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="fe8c27c1-b2ab-4eea-bb37-c70c45e4982b" name="changePropertiesValues" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="93667316-0cc3-4eb1-9a7c-896e92df7fca" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="742c2ec2-22c2-4cbe-ac2a-f6c705fce512" name="[]Property" direction="In" isUnique="false">
+                  <elementDefinition Id="db70c86c-02ff-4538-a6d6-847873c1b363" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b08ea9ff-12f6-4261-8491-32b45b0ee806" name="[]propertyValue" direction="In" isUnique="false">
+                  <elementDefinition Id="aca418f6-05a6-4e51-938c-0dc417853390" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b8483668-5b88-4fe1-b03f-71d31f86da0e" name="createNewPropertiesSet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="206ba16b-951e-48b5-9ac8-f644f8b01cc4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5713a53d-7193-4873-b0ec-e5c2c1e516f9" name="[]Property" direction="In" isUnique="false">
+                  <elementDefinition Id="1b20f361-c23e-47f8-b15e-5626795ef9a2" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9bd5af40-66a8-4a75-90ce-3eedf6f3e0e0" name="[]propertyValue" direction="In" isUnique="false">
+                  <elementDefinition Id="b84a9990-47ec-44b8-bfe0-8298a6c4882e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -236,7 +339,7 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="2fd4b2de-24e7-401d-bb09-8f647a2787f6" name="propertyValue&lt;Dictionnary&gt;" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="2fd4b2de-24e7-401d-bb09-8f647a2787f6" name="propertyValue(Dictionnary&lt;Property:value&gt;)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="faf06467-b2c7-4175-a55c-54166b759acc" />
           </property>
         </ownedAttributesInternal>
@@ -331,10 +434,88 @@
           <property Id="66dcfcbc-da55-4157-a7ba-0d3c4f48a07e" name="category" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="7c3e9369-83f7-40f4-add8-f58516a6ae1c" />
           </property>
-          <property Id="cb45b538-f548-410d-9e16-301b3cf79447" name="properties" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="cb45b538-f548-410d-9e16-301b3cf79447" name="properties&lt;Property&gt;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="69d1f198-56dd-4d8c-b245-1512cf94e8c4" />
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ffdb9acd-e48b-4cd6-ba09-06d7eb302745" name="applyToAllItems" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="88e449a5-63a8-4164-b70b-db6905d9cda8" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="793037a4-a614-456d-8563-677683e83435" name="Order" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f44627d0-525d-431f-a3d5-3951451c1b81" />
+        <targetEnds>
+          <association Id="deb1ac15-a2ae-4379-8136-9b218b4ded7b" isDerived="false" sourceEndRoleName="Order" targetEndRoleName="Item" isLeaf="false" name="requets" isAbstract="false">
+            <classMoniker Id="bbc24bd8-6760-405b-a1e6-350b5e410377" LastKnownName="Item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fe8cedf1-018b-40ed-98cb-b0eab0c9231b" name="Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="9ba178de-9ac7-4b26-a749-5df5d79442e9" name="Lower" value="*">
+                      <elementDefinition Id="feb8e555-1869-4a48-afed-053022964665" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="1d73b62f-311c-4df1-8275-0d609c546335" name="Upper" value="*">
+                      <elementDefinition Id="a99f76d9-3af2-49ab-8cb2-ec08358e0b7a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b43d7a74-d913-49de-9bcc-946fd77c784a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="632a9984-5427-4a67-a91f-4d05be243736" name="Item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="884d5eea-e54e-4285-a83a-4823bd776b68" name="Lower" value="1">
+                      <elementDefinition Id="30aab2fc-653b-4f1a-8622-f3e90b0ef4f5" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="3a76ac8f-0e2d-407f-aa13-238a3b0868d3" name="Upper" value="*">
+                      <elementDefinition Id="ea0acd23-d881-41dc-9031-6ad3b17ccff2" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="bfbbfb29-067d-4238-841d-0bab76f6a0d6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0c122235-57c5-464f-bd32-6721d03b20f8" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="0d621ed3-d685-4656-a089-0cd512f447a0" name="[]quantities" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0f6cc8a1-0cd8-481b-a57d-6096a00e4461" />
+          </property>
+          <property Id="87f9d36c-a026-4359-bdc4-cb7ec75da91d" name="[]references" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a3fd31b6-e541-437c-a2ed-4acdb2edb9a5" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="dbded254-bf85-4cca-bfe7-d8363cc68945" name="editOrder" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="109e72fc-284e-4b0e-9704-8ee687760fb9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d0fff536-4232-4d5e-840f-f8574bd2ad85" name="ref orderText" direction="In" isUnique="false">
+                  <elementDefinition Id="0f84170a-b163-4b7f-a3e5-1633334d4c93" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4d869992-9f0f-472b-b54a-4eb4f917bd02" name="executeOrder" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0fa320ac-37b2-489d-8ac5-69ea4401a9fb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="37b897a9-9342-4303-901f-247075e95624" name="orderText" direction="In" isUnique="false">
+                  <elementDefinition Id="53e10beb-79c5-461a-b4c9-7288a49db27b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>
