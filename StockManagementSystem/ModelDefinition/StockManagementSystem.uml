@@ -1190,7 +1190,7 @@
     <packageHasNamedElement>
       <useCase
         Id="efe3a73b-c1aa-45c2-8616-ed1aeebcb69c"
-        name="AddNewItem"
+        name="Add New Item"
         isAbstract="false"
         isLeaf="false">
         <additions>
@@ -1198,7 +1198,7 @@
             Id="0868f509-f2b0-4322-a992-fb05e7659551">
             <useCaseMoniker
               Id="6183f2cc-76a3-423d-97cd-3ac131863d29"
-              LastKnownName="ChooseAType"
+              LastKnownName="Choose A Type"
               LastKnownLocation="StockManagementSystem.uml" />
           </include>
         </additions>
@@ -1220,7 +1220,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="efe3a73b-c1aa-45c2-8616-ed1aeebcb69c"
-              LastKnownName="AddNewItem"
+              LastKnownName="Add New Item"
               LastKnownLocation="StockManagementSystem.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1259,7 +1259,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="9cde1a39-8454-4125-a26b-071573ef3975"
-              LastKnownName="CreateNewProperty"
+              LastKnownName="Create New Property"
               LastKnownLocation="StockManagementSystem.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1298,7 +1298,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="d24f4d9d-b7a8-4e43-be3d-4b6d8a3446e9"
-              LastKnownName="CreateNewPropertyFormat"
+              LastKnownName="Create New Property Format"
               LastKnownLocation="StockManagementSystem.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1328,21 +1328,145 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="fae3eafd-6119-4320-bd9d-891836272ad9"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Exit Quantity of an Item"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a3a4154c-bba4-41f0-bc0b-3f94fd7f01b7"
+              LastKnownName="Exit Quantity of an Item"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1e79af8e-191d-4e31-903b-cfbb03f94263"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="31a5fa4c-47d5-4080-87ed-e5136399572d"
+                  name="Exit Quantity of an Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6789c9ba-dd81-462f-a1de-b813cf640313"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add Quantity of an Item1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8c93c081-97d8-45f9-a14c-5baf6fb1ca1b"
+              LastKnownName="Add Quantity of an Item"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1c59fe36-d9a5-4914-b0fc-d06ec7429de9"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="df201845-4d71-4c94-b7e9-a2c8ab137c59"
+                  name="Add Quantity of an Item1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bfacdf9d-65c9-46ad-8c41-7dbf075c98e7"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Edit Order"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3782478e-f540-4aca-b2da-59907f09cf32"
+              LastKnownName="Edit Order"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2bc05ceb-c086-4ebe-8ffa-49fadf703937"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ba55355-a2fa-4845-b32e-7537fcef4b61"
+                  name="Edit Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="6183f2cc-76a3-423d-97cd-3ac131863d29"
-        name="ChooseAType"
+        name="Choose A Type"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1d05813b-f2a3-433d-b11d-75d1f395eca7"
+        name="Add New Type"
         isAbstract="false"
         isLeaf="false">
         <extendedCases>
           <extend
-            Id="3bd35304-a646-47ef-b6db-6f5c4b6e522a">
+            Id="81273aff-e102-4525-84b6-0dababdd7d9e">
             <useCaseMoniker
-              Id="1d05813b-f2a3-433d-b11d-75d1f395eca7"
-              LastKnownName="AddNewType"
+              Id="6183f2cc-76a3-423d-97cd-3ac131863d29"
+              LastKnownName="Choose A Type"
               LastKnownLocation="StockManagementSystem.uml" />
           </extend>
         </extendedCases>
@@ -1350,22 +1474,129 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
-        Id="1d05813b-f2a3-433d-b11d-75d1f395eca7"
-        name="AddNewType"
-        isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
         Id="9cde1a39-8454-4125-a26b-071573ef3975"
-        name="CreateNewProperty"
+        name="Create New Property"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="d24f4d9d-b7a8-4e43-be3d-4b6d8a3446e9"
-        name="CreateNewPropertyFormat"
+        name="Create New Property Format"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6d100768-546a-4294-b9ea-5942965e8fb2"
+        name="Add Operation"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="d494f6c8-46ec-4eb0-946e-c832bd606fd8">
+            <useCaseMoniker
+              Id="6183f2cc-76a3-423d-97cd-3ac131863d29"
+              LastKnownName="Choose A Type"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a3a4154c-bba4-41f0-bc0b-3f94fd7f01b7"
+        name="Exit Quantity of an Item"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="3597afe7-8c92-4d61-afc5-1b0c05bfa3f7"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="e38bee01-8e4d-4b65-84c0-8ab37958ed7a"
+              LastKnownName="Edit Item Quantity"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8c93c081-97d8-45f9-a14c-5baf6fb1ca1b"
+        name="Add Quantity of an Item"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="92a82c5d-76d1-4b03-affc-23f90eaea4c0"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="e38bee01-8e4d-4b65-84c0-8ab37958ed7a"
+              LastKnownName="Edit Item Quantity"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </generalization>
+        </generalsInternal>
+        <extendedCases>
+          <extend
+            Id="74a4e6e3-b915-4607-9b8e-98204b81148f">
+            <useCaseMoniker
+              Id="1d05813b-f2a3-433d-b11d-75d1f395eca7"
+              LastKnownName="Add New Type"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
+          <extend
+            Id="430d6da0-b8b3-4c93-94ad-54c73c2ab641">
+            <useCaseMoniker
+              Id="927161bd-557f-4cdf-baad-f1ff31c19e60"
+              LastKnownName="Add New Properties Set"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="927161bd-557f-4cdf-baad-f1ff31c19e60"
+        name="Add New Properties Set"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e38bee01-8e4d-4b65-84c0-8ab37958ed7a"
+        name="Edit Item Quantity"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3782478e-f540-4aca-b2da-59907f09cf32"
+        name="Edit Order"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c0993c03-020a-483c-8348-e74ecbc82bba">
+            <useCaseMoniker
+              Id="c87185e1-fa42-44cc-bb97-6a682529c0af"
+              LastKnownName="Execute Order"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c87185e1-fa42-44cc-bb97-6a682529c0af"
+        name="Execute Order"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="55dc7221-b12f-4ab5-b1d6-f67464b0dc59"
+        name="Order Text"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
