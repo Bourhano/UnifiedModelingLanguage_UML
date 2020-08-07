@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="87b48e94-f748-4063-99e0-21a034f99a53" name="StockModelingSystemArchitecture" linkedPackageId="605fbae3-f340-40fe-8fe5-8eb370c3e376" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="87b48e94-f748-4063-99e0-21a034f99a53" name="StockModelingSystemArchitecture" linkedPackageId="605fbae3-f340-40fe-8fe5-8eb370c3e376" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <ownedCommentsInternal>
     <comment Id="1df638f4-541c-4603-b726-b6ae735d1c82">
       <elementDefinition Id="d5b0dc92-8c5e-4c1e-b183-4af8dd8bc5d3" />
@@ -44,26 +44,6 @@
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="1c9de092-8543-4bdf-9d30-66398015e5f2">
-      <profileInstance Id="5b1d9f78-7661-4805-859b-c3f1d43efe22" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="887ad42d-44d9-4f08-b431-5f623b2ff059">
-      <profileInstance Id="0618cadb-8362-48da-a674-876029d7f7f3" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="bee5c380-a473-416e-9808-7337a1f428ae">
-      <profileInstance Id="c93dfbfd-e86f-4980-8764-c6c9b19d052e" name="TextTemplateBindings">
-        <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
-      </profileInstance>
-      <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="fe7a5eef-1f06-4517-b221-689aea888d87" name="Branch" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -614,5 +594,25 @@
   </packagedElements>
   <package Id="605fbae3-f340-40fe-8fe5-8eb370c3e376" name="StockManagementSystem">
     <elementDefinition Id="fc60c8e6-7ae5-4030-8055-34d885e91f60" />
+    <profileInstances>
+      <packageHasProfileInstances Id="1c9de092-8543-4bdf-9d30-66398015e5f2">
+        <profileInstance Id="5b1d9f78-7661-4805-859b-c3f1d43efe22" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="887ad42d-44d9-4f08-b431-5f623b2ff059">
+        <profileInstance Id="0618cadb-8362-48da-a674-876029d7f7f3" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="bee5c380-a473-416e-9808-7337a1f428ae">
+        <profileInstance Id="c93dfbfd-e86f-4980-8764-c6c9b19d052e" name="TextTemplateBindings">
+          <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
+        </profileInstance>
+        <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
