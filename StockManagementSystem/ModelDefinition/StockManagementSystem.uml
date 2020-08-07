@@ -64,6 +64,36 @@
           LastKnownLocation="StockManagementSystem.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="6cd4e761-e987-4dcb-9dfc-d73b2246d22b">
+      <body>System must answer this call with a success or failure message, based on stocks.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="24e33b97-0950-4ce3-8356-8d9e16d41465"
+          LastKnownName="Execute Assossiaction Procedure"
+          LastKnownLocation="StockManagementSystem.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="9892e84d-8344-4847-8098-633a7756ea45">
+      <body>Only if no PropertiesSet is defined with its Properties values.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="2d5a6b3c-dda1-4425-b27f-445c4e901482"
+          LastKnownName="Add Item Property"
+          LastKnownLocation="StockManagementSystem.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="80249558-4fc6-4f24-a23a-80ac8020520d">
+      <body>User can specify a Type on which the Operation is run.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="988cddcc-ede3-408b-8ef8-2e75ed6cd6fc"
+          LastKnownName="Define Item Operation"
+          LastKnownLocation="StockManagementSystem.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -1185,12 +1215,54 @@
         Id="c2ca5c42-07bf-4064-815c-39e104ca7da6"
         name="System"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="6d039b37-b538-4ccd-b69b-50cded1b56d5"
+            isDerived="false"
+            sourceEndRoleName="System"
+            targetEndRoleName="Check Availability"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="23233337-aab5-49b2-9bb9-7111c07caa91"
+              LastKnownName="Check Availability"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fa8f6a15-d46b-43ff-90bd-38fb49727794"
+                  name="System"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="baf948f8-bd18-464c-9b54-920e2c611463"
+                  name="Check Availability"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="efe3a73b-c1aa-45c2-8616-ed1aeebcb69c"
-        name="Add New Item"
+        name="Define New Item"
         isAbstract="false"
         isLeaf="false">
         <additions>
@@ -1220,7 +1292,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="efe3a73b-c1aa-45c2-8616-ed1aeebcb69c"
-              LastKnownName="Add New Item"
+              LastKnownName="Define New Item"
               LastKnownLocation="StockManagementSystem.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1445,6 +1517,123 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="0a594220-60a9-4bf6-9ab0-bcdc6a2240c1"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Define Assossiaction Procedure"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4fc60cae-60a1-4a1c-b1e6-a0dacb19f45c"
+              LastKnownName="Define Assossiaction Procedure"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="66731416-b886-4eea-95cb-4d83c1aa819d"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c39c6ef5-8ab7-45ed-88ca-4ce4cec2372d"
+                  name="Define Assossiaction Procedure"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="26e29808-56ad-4e94-81aa-ef52f2a3c2e6"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Define Item Operation"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="988cddcc-ede3-408b-8ef8-2e75ed6cd6fc"
+              LastKnownName="Define Item Operation"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="58914443-bc03-4cc3-986e-4b9e88a7d98f"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1541eaf7-b710-45e5-903c-382704a6b230"
+                  name="Define Item Operation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7d1d215c-be28-49f1-810a-2f622088a612"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Run Operation on Item"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e414b6be-2fd5-494b-a2fd-a930f28d4b45"
+              LastKnownName="Execute Operation on Item"
+              LastKnownLocation="StockManagementSystem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2663bb27-9ec0-4f58-9b5f-0d911439806a"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bbdc39af-04f8-4252-8e91-99b31e7807f7"
+                  name="Run Operation on Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -1469,6 +1658,13 @@
               LastKnownName="Choose A Type"
               LastKnownLocation="StockManagementSystem.uml" />
           </extend>
+          <extend
+            Id="88fcc46b-b4a6-438d-92be-d657d7f70527">
+            <useCaseMoniker
+              Id="8c93c081-97d8-45f9-a14c-5baf6fb1ca1b"
+              LastKnownName="Add Quantity of an Item"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
         </extendedCases>
       </useCase>
     </packageHasNamedElement>
@@ -1484,7 +1680,17 @@
         Id="d24f4d9d-b7a8-4e43-be3d-4b6d8a3446e9"
         name="Create New Property Format"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="e3858f08-ddd5-4f9d-b689-dbed110b6380">
+            <useCaseMoniker
+              Id="9cde1a39-8454-4125-a26b-071573ef3975"
+              LastKnownName="Create New Property"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -1537,22 +1743,6 @@
               LastKnownLocation="StockManagementSystem.uml" />
           </generalization>
         </generalsInternal>
-        <extendedCases>
-          <extend
-            Id="74a4e6e3-b915-4607-9b8e-98204b81148f">
-            <useCaseMoniker
-              Id="1d05813b-f2a3-433d-b11d-75d1f395eca7"
-              LastKnownName="Add New Type"
-              LastKnownLocation="StockManagementSystem.uml" />
-          </extend>
-          <extend
-            Id="430d6da0-b8b3-4c93-94ad-54c73c2ab641">
-            <useCaseMoniker
-              Id="927161bd-557f-4cdf-baad-f1ff31c19e60"
-              LastKnownName="Add New Properties Set"
-              LastKnownLocation="StockManagementSystem.uml" />
-          </extend>
-        </extendedCases>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1560,7 +1750,24 @@
         Id="927161bd-557f-4cdf-baad-f1ff31c19e60"
         name="Add New Properties Set"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="799ee592-1cb3-4d33-9d24-efe474bccb9e">
+            <useCaseMoniker
+              Id="8c93c081-97d8-45f9-a14c-5baf6fb1ca1b"
+              LastKnownName="Add Quantity of an Item"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
+          <extend
+            Id="5386fc49-3992-44e2-934c-1836ff513555">
+            <useCaseMoniker
+              Id="e414b6be-2fd5-494b-a2fd-a930f28d4b45"
+              LastKnownName="Execute Operation on Item"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -1574,13 +1781,92 @@
         Id="3782478e-f540-4aca-b2da-59907f09cf32"
         name="Edit Order"
         isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c87185e1-fa42-44cc-bb97-6a682529c0af"
+        name="Execute Order"
+        isAbstract="false"
         isLeaf="false">
         <extendedCases>
           <extend
-            Id="c0993c03-020a-483c-8348-e74ecbc82bba">
+            Id="9f9591de-a96d-49b9-a9e2-91362c4e0ed9">
             <useCaseMoniker
-              Id="c87185e1-fa42-44cc-bb97-6a682529c0af"
-              LastKnownName="Execute Order"
+              Id="3782478e-f540-4aca-b2da-59907f09cf32"
+              LastKnownName="Edit Order"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="55dc7221-b12f-4ab5-b1d6-f67464b0dc59"
+        name="Order Text"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="6bc9fcf9-f6aa-4007-ab78-52845cbb37cb"
+        name="Subsystem1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4fc60cae-60a1-4a1c-b1e6-a0dacb19f45c"
+        name="Define Assossiaction Procedure"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="24e33b97-0950-4ce3-8356-8d9e16d41465"
+        name="Execute Assossiaction Procedure"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="a3151a6e-8c9c-4762-aec4-94f21de20009">
+            <useCaseMoniker
+              Id="4fc60cae-60a1-4a1c-b1e6-a0dacb19f45c"
+              LastKnownName="Define Assossiaction Procedure"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="5d4493f4-3fae-486e-a1d2-4e84956a4245">
+            <useCaseMoniker
+              Id="23233337-aab5-49b2-9bb9-7111c07caa91"
+              LastKnownName="Check Availability"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="23233337-aab5-49b2-9bb9-7111c07caa91"
+        name="Check Availability"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2d5a6b3c-dda1-4425-b27f-445c4e901482"
+        name="Add Item Property"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="13294d0b-70ad-49ac-804b-73641a7b1f84">
+            <useCaseMoniker
+              Id="1d05813b-f2a3-433d-b11d-75d1f395eca7"
+              LastKnownName="Add New Type"
               LastKnownLocation="StockManagementSystem.uml" />
           </extend>
         </extendedCases>
@@ -1588,15 +1874,32 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
-        Id="c87185e1-fa42-44cc-bb97-6a682529c0af"
-        name="Execute Order"
+        Id="988cddcc-ede3-408b-8ef8-2e75ed6cd6fc"
+        name="Define Item Operation"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <artifact
-        Id="55dc7221-b12f-4ab5-b1d6-f67464b0dc59"
-        name="Order Text"
+      <useCase
+        Id="f85c7403-a831-41d6-896f-9adb41cdf88f"
+        name="Add Operation to certain Type"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="2031a796-9226-4969-b26c-e2a7db32b8d5">
+            <useCaseMoniker
+              Id="988cddcc-ede3-408b-8ef8-2e75ed6cd6fc"
+              LastKnownName="Define Item Operation"
+              LastKnownLocation="StockManagementSystem.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e414b6be-2fd5-494b-a2fd-a930f28d4b45"
+        name="Execute Operation on Item"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>

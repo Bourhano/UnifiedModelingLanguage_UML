@@ -1,8 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4ead3beb-6a36-4996-aabd-b2d732ca52a5" name="StockManagementSystem" linkedPackageId="ecf1380e-e4fa-4c54-b530-bd3d3222b5a7" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="352f1159-9169-4bfe-bfcc-3c8496bd587a">
+      <elementDefinition Id="6cd4e761-e987-4dcb-9dfc-d73b2246d22b" />
+      <body>System must answer this call with a success or failure message, based on stocks.</body>
+      <annotatedElements>
+        <useCaseMoniker Id="5c057658-1e2e-4a27-a7f9-6c3c9335fb58" LastKnownName="Execute Assossiaction Procedure" />
+      </annotatedElements>
+    </comment>
+    <comment Id="1a577777-ddd0-4c46-b888-638a47805839">
+      <elementDefinition Id="9892e84d-8344-4847-8098-633a7756ea45" />
+      <body>Only if no PropertiesSet is defined with its Properties values.</body>
+      <annotatedElements>
+        <useCaseMoniker Id="d2b40699-1238-4a82-9bfc-5faaee4bff32" LastKnownName="Add Item Property" />
+      </annotatedElements>
+    </comment>
+    <comment Id="6fe3391d-410e-49ed-aba1-ccab80b68444">
+      <elementDefinition Id="80249558-4fc6-4f24-a23a-80ac8020520d" />
+      <body>User can specify a Type on which the Operation is run.</body>
+      <annotatedElements>
+        <useCaseMoniker Id="f82fd6d3-2c9f-4d3f-a9fe-d1525c1deddd" LastKnownName="Define Item Operation" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <useCaseModelRootHasTypes>
-      <useCase Id="b44be0de-f70d-4863-9d9b-4ebee822164c" name="Add New Item" isAbstract="false" isLeaf="false">
+      <useCase Id="b44be0de-f70d-4863-9d9b-4ebee822164c" name="Define New Item" isAbstract="false" isLeaf="false">
         <elementDefinition Id="efe3a73b-c1aa-45c2-8616-ed1aeebcb69c" />
         <additions>
           <include Id="ae5127a2-a29b-4324-985c-6a4d0e85ac78">
@@ -17,7 +40,7 @@
         <elementDefinition Id="8363dc58-3efe-49de-84f9-a5d0c4a8b094" />
         <targetEnds>
           <association Id="9d27af4c-5dc1-4275-88a7-683cc52e0eb0" isDerived="false" sourceEndRoleName="User" targetEndRoleName="AddNewItem" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="b44be0de-f70d-4863-9d9b-4ebee822164c" LastKnownName="Add New Item" />
+            <useCaseMoniker Id="b44be0de-f70d-4863-9d9b-4ebee822164c" LastKnownName="Define New Item" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="0fb0c437-fff0-4b4c-a2f4-cbca46972893" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -112,6 +135,54 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="bfacdf9d-65c9-46ad-8c41-7dbf075c98e7" />
           </association>
+          <association Id="3529e960-f60a-493e-96c3-dad9a842575b" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Define Assossiaction Procedure" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b5914e49-7f99-4298-b5d9-7eb86c3d3f6b" LastKnownName="Define Assossiaction Procedure" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e7adf52c-01ac-4c80-b838-424f2ede4ccc" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="66731416-b886-4eea-95cb-4d83c1aa819d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="393a643c-859c-470a-bb09-ef24ca1b92a4" name="Define Assossiaction Procedure" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c39c6ef5-8ab7-45ed-88ca-4ce4cec2372d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0a594220-60a9-4bf6-9ab0-bcdc6a2240c1" />
+          </association>
+          <association Id="6b3e524b-a55a-4a25-917e-f851df9121f5" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Define Item Operation" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f82fd6d3-2c9f-4d3f-a9fe-d1525c1deddd" LastKnownName="Define Item Operation" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="47b7697a-87f2-4dd1-b01a-dcfdc8dcaf5c" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="58914443-bc03-4cc3-986e-4b9e88a7d98f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="af7018d8-f8a8-484a-9208-4b918eeba997" name="Define Item Operation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1541eaf7-b710-45e5-903c-382704a6b230" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="26e29808-56ad-4e94-81aa-ef52f2a3c2e6" />
+          </association>
+          <association Id="f5139136-9430-42ee-bc6e-a9c2e595762f" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Run Operation on Item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ac67ce7c-4fd7-48d3-8617-844137f9de6e" LastKnownName="Execute Operation on Item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b7b444d4-1113-48a7-8022-be6618b2657d" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2663bb27-9ec0-4f58-9b5f-0d911439806a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c1dd25de-1940-4578-84e1-728b78f976b9" name="Run Operation on Item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bbdc39af-04f8-4252-8e91-99b31e7807f7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7d1d215c-be28-49f1-810a-2f622088a612" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -128,6 +199,10 @@
             <useCaseMoniker Id="210bf12c-cdcf-4e96-85c4-10b0d99c8a64" LastKnownName="Choose A Type" />
             <elementDefinition Id="81273aff-e102-4525-84b6-0dababdd7d9e" />
           </extend>
+          <extend Id="1efaf36a-7074-4327-bd72-00d3716aeafa">
+            <useCaseMoniker Id="abe0defb-b6a6-4083-a71d-5dc3796c7fc7" LastKnownName="Add Quantity of an Item" />
+            <elementDefinition Id="88fcc46b-b4a6-438d-92be-d657d7f70527" />
+          </extend>
         </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
@@ -139,6 +214,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="d8cd39de-b7ec-4d9f-aad6-8235a02b5309" name="Create New Property Format" isAbstract="false" isLeaf="false">
         <elementDefinition Id="d24f4d9d-b7a8-4e43-be3d-4b6d8a3446e9" />
+        <suppliersInternal>
+          <dependency Id="dc82bdbf-6d62-40d7-850a-bd9692e3c7c4">
+            <useCaseMoniker Id="b215d445-47e1-4c1f-a689-3b25c554ccd2" LastKnownName="Create New Property" />
+            <elementDefinition Id="e3858f08-ddd5-4f9d-b689-dbed110b6380" />
+          </dependency>
+        </suppliersInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -172,21 +253,21 @@
             <elementDefinition Id="92a82c5d-76d1-4b03-affc-23f90eaea4c0" />
           </generalization>
         </generalsInternal>
-        <extendedCases>
-          <extend Id="eac46d43-daa6-420b-b8bb-496b4ee07826">
-            <useCaseMoniker Id="95551f81-00f1-47bc-8db3-2feb7b1feeb8" LastKnownName="Add New Type" />
-            <elementDefinition Id="74a4e6e3-b915-4607-9b8e-98204b81148f" />
-          </extend>
-          <extend Id="022e4d03-ca92-4e8d-a082-fac50697ebbd">
-            <useCaseMoniker Id="edd6f76a-0978-4fa8-921f-7902dd62b898" LastKnownName="Add New Properties Set" />
-            <elementDefinition Id="430d6da0-b8b3-4c93-94ad-54c73c2ab641" />
-          </extend>
-        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="edd6f76a-0978-4fa8-921f-7902dd62b898" name="Add New Properties Set" isAbstract="false" isLeaf="false">
         <elementDefinition Id="927161bd-557f-4cdf-baad-f1ff31c19e60" />
+        <extendedCases>
+          <extend Id="5ce0e118-3b93-4a80-927f-880e114ccd43">
+            <useCaseMoniker Id="abe0defb-b6a6-4083-a71d-5dc3796c7fc7" LastKnownName="Add Quantity of an Item" />
+            <elementDefinition Id="799ee592-1cb3-4d33-9d24-efe474bccb9e" />
+          </extend>
+          <extend Id="a2ba326f-89cd-4cf9-b294-3485bcc94c7a">
+            <useCaseMoniker Id="ac67ce7c-4fd7-48d3-8617-844137f9de6e" LastKnownName="Execute Operation on Item" />
+            <elementDefinition Id="5386fc49-3992-44e2-934c-1836ff513555" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -197,23 +278,105 @@
     <useCaseModelRootHasTypes>
       <useCase Id="eef54de5-1c41-4328-98ae-a7c930424488" name="Edit Order" isAbstract="false" isLeaf="false">
         <elementDefinition Id="3782478e-f540-4aca-b2da-59907f09cf32" />
-        <extendedCases>
-          <extend Id="b57baacc-23da-422b-9c51-80f2a729235e">
-            <useCaseMoniker Id="84bc4850-ff7e-456c-80a9-1eb31ccd05a6" LastKnownName="Execute Order" />
-            <elementDefinition Id="c0993c03-020a-483c-8348-e74ecbc82bba" />
-          </extend>
-        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="84bc4850-ff7e-456c-80a9-1eb31ccd05a6" name="Execute Order" isAbstract="false" isLeaf="false">
         <elementDefinition Id="c87185e1-fa42-44cc-bb97-6a682529c0af" />
+        <extendedCases>
+          <extend Id="5164d639-6498-4611-a3c2-0be202b7aabb">
+            <useCaseMoniker Id="eef54de5-1c41-4328-98ae-a7c930424488" LastKnownName="Edit Order" />
+            <elementDefinition Id="9f9591de-a96d-49b9-a9e2-91362c4e0ed9" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <artifact Id="db9b2c32-aeaa-4cb5-9913-1e91a029996c" name="Order Text" isAbstract="false" isLeaf="false">
         <elementDefinition Id="55dc7221-b12f-4ab5-b1d6-f67464b0dc59" />
       </artifact>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b5914e49-7f99-4298-b5d9-7eb86c3d3f6b" name="Define Assossiaction Procedure" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4fc60cae-60a1-4a1c-b1e6-a0dacb19f45c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5c057658-1e2e-4a27-a7f9-6c3c9335fb58" name="Execute Assossiaction Procedure" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="24e33b97-0950-4ce3-8356-8d9e16d41465" />
+        <extendedCases>
+          <extend Id="8e204d15-b287-4ae6-b57e-f97d688eccf7">
+            <useCaseMoniker Id="b5914e49-7f99-4298-b5d9-7eb86c3d3f6b" LastKnownName="Define Assossiaction Procedure" />
+            <elementDefinition Id="a3151a6e-8c9c-4762-aec4-94f21de20009" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="10bd4e44-6597-4842-85a5-263200b03f5a">
+            <useCaseMoniker Id="949b9820-0a3e-4074-9166-31885ad6273b" LastKnownName="Check Availability" />
+            <elementDefinition Id="5d4493f4-3fae-486e-a1d2-4e84956a4245" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="d48a20a4-5758-44b2-9d6b-5de9ff9b28b1" name="System" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c2ca5c42-07bf-4064-815c-39e104ca7da6" />
+        <targetEnds>
+          <association Id="187895fc-7bad-4695-924d-8a9c364ff9c0" isDerived="false" sourceEndRoleName="System" targetEndRoleName="Check Availability" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="949b9820-0a3e-4074-9166-31885ad6273b" LastKnownName="Check Availability" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cff12184-f070-4996-afeb-022f9e1a77cd" name="System" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fa8f6a15-d46b-43ff-90bd-38fb49727794" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="76010183-dcb6-45c5-8510-fad9a6777414" name="Check Availability" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="baf948f8-bd18-464c-9b54-920e2c611463" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6d039b37-b538-4ccd-b69b-50cded1b56d5" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="949b9820-0a3e-4074-9166-31885ad6273b" name="Check Availability" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="23233337-aab5-49b2-9bb9-7111c07caa91" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d2b40699-1238-4a82-9bfc-5faaee4bff32" name="Add Item Property" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2d5a6b3c-dda1-4425-b27f-445c4e901482" />
+        <extendedCases>
+          <extend Id="b69b50e7-eef5-48dc-9ff0-f8ec6f32ee7a">
+            <useCaseMoniker Id="95551f81-00f1-47bc-8db3-2feb7b1feeb8" LastKnownName="Add New Type" />
+            <elementDefinition Id="13294d0b-70ad-49ac-804b-73641a7b1f84" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f82fd6d3-2c9f-4d3f-a9fe-d1525c1deddd" name="Define Item Operation" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="988cddcc-ede3-408b-8ef8-2e75ed6cd6fc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6376de81-3b8b-4beb-8917-cbdf975e647e" name="Add Operation to certain Type" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f85c7403-a831-41d6-896f-9adb41cdf88f" />
+        <extendedCases>
+          <extend Id="1fc65374-add1-432d-ac77-9d776c5ffe31">
+            <useCaseMoniker Id="f82fd6d3-2c9f-4d3f-a9fe-d1525c1deddd" LastKnownName="Define Item Operation" />
+            <elementDefinition Id="2031a796-9226-4969-b26c-e2a7db32b8d5" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ac67ce7c-4fd7-48d3-8617-844137f9de6e" name="Execute Operation on Item" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e414b6be-2fd5-494b-a2fd-a930f28d4b45" />
+      </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="ecf1380e-e4fa-4c54-b530-bd3d3222b5a7" name="StockManagementSystem">
