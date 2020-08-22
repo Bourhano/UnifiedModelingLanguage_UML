@@ -94,6 +94,16 @@
           LastKnownLocation="StockManagementSystem.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="8c35cdef-c2ce-4be9-b601-6ff776cd4f44">
+      <body>Create New Property depends on the existance of a prior Property Fromat. Hence the dependency relation exists.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="9cde1a39-8454-4125-a26b-071573ef3975"
+          LastKnownName="Create New Property"
+          LastKnownLocation="StockManagementSystem.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -420,7 +430,24 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="32ed14ab-becf-41f3-910a-e99065839d44"
+                  name="category"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8350c5f2-616f-4654-8a9a-8834addaec2a"
+                  name="type"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1808,14 +1835,6 @@
         isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <subsystem
-        Id="6bc9fcf9-f6aa-4007-ab78-52845cbb37cb"
-        name="Subsystem1"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <useCase
         Id="4fc60cae-60a1-4a1c-b1e6-a0dacb19f45c"
         name="Define Assossiaction Procedure"
@@ -1905,796 +1924,1320 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <interaction
-        Id="2663ba72-f19f-40c4-95d6-c0a05d9a068f"
-        name="Create New Item"
+        Id="48436b2f-fdce-46cd-96f1-69a74e5ce03b"
+        name="AddNewItem"
         collapseFragmentsFlag="false"
         isActiveClass="false"
         isAbstract="false"
         isLeaf="false"
         isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="3e2ed4a5-264a-437a-80d7-d4f56c6af3ae">
+            <body>Implementation explained in 
+ChooseItemType sd</body>
+            <annotatedElements>
+              <interactionUseMoniker
+                Id="845a33a5-75ce-4696-acec-93f684815b1b"
+                LastKnownName="Choose Item Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
         <fragments>
-          <interactionUse
-            Id="cadc32f0-ffc0-406f-96c0-c6d4240dcd60"
-            name="InteractionUse1">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </coveredLifelines>
-            <interactionUseOccurrenceSpecifications>
-              <interactionUseOccurrenceSpecificationMoniker
-                Id="455e1292-89e1-4331-9359-8c9911e8d3a9"
-                LastKnownName="InteractionUseOccurrenceSpecification5"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </interactionUseOccurrenceSpecifications>
-          </interactionUse>
-          <interactionUseOccurrenceSpecification
-            Id="455e1292-89e1-4331-9359-8c9911e8d3a9"
-            name="InteractionUseOccurrenceSpecification5">
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
           <behaviorExecutionSpecification
-            Id="eae2bcff-8b02-4b1b-bef3-7811dd26b2d9"
-            name="BehaviorExecutionSpecification1">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="fc6aa104-6201-4f2b-a764-292de90e60ce"
-                LastKnownName="ExecutionOccurrenceSpecification2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="8200f548-5f55-4b96-ae9b-01cca03fa47d"
-                LastKnownName="ExecutionOccurrenceSpecification1"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="e317ab4e-f487-40b9-ba21-0fd5f72724eb"
-                LastKnownName="MessageOccurrenceSpecification2"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="9c18c3b0-665d-4bfa-ade3-e7631acf6b08"
-                LastKnownName="MessageOccurrenceSpecification3"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="8200f548-5f55-4b96-ae9b-01cca03fa47d"
-            name="ExecutionOccurrenceSpecification1">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="7180d83c-1987-48ea-b269-90e911176c0f"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="StockManagementSystem.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="e317ab4e-f487-40b9-ba21-0fd5f72724eb"
-            name="MessageOccurrenceSpecification2">
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="cb4632f0-91ef-4e74-8059-4688989cf20b"
-            name="MessageOccurrenceSpecification1">
-            <covered>
-              <lifelineMoniker
-                Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-                LastKnownName="Lifeline1"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="9c18c3b0-665d-4bfa-ade3-e7631acf6b08"
-            name="MessageOccurrenceSpecification3">
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="a0c6f75e-4041-4710-9504-37a4347f9580"
-            name="MessageOccurrenceSpecification4">
-            <covered>
-              <lifelineMoniker
-                Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-                LastKnownName="Lifeline1"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="fc6aa104-6201-4f2b-a764-292de90e60ce"
-            name="ExecutionOccurrenceSpecification2">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="79a669a7-05b3-4f23-9cc6-2c0d8fd34028"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="StockManagementSystem.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="85048ca2-8b73-4a81-9912-0675d789f562"
-            name="BehaviorExecutionSpecification2">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="70efd5fe-fd92-43f9-b654-20ce7985c8ab"
-                LastKnownName="ExecutionOccurrenceSpecification4"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="5c505230-d398-4249-8669-c0b291c3db7a"
-                LastKnownName="ExecutionOccurrenceSpecification3"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="00c5753f-29a2-4bdd-a875-a48c6efa5edf"
-                LastKnownName="MessageOccurrenceSpecification6"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <interactionUseOccurrenceSpecificationMoniker
-                Id="ffd211be-9e5f-4bf7-9b00-35699502e414"
-                LastKnownName="InteractionUseOccurrenceSpecification6"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="86623282-7591-4fc6-ba1b-4bf0fae96270"
-                LastKnownName="MessageOccurrenceSpecification11"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="705db2c5-b988-4da0-ac5d-5c3c47f88b4e"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="5c505230-d398-4249-8669-c0b291c3db7a"
-            name="ExecutionOccurrenceSpecification3">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="01718eaa-7048-4d21-93d6-fbee43b258a5"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="StockManagementSystem.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="00c5753f-29a2-4bdd-a875-a48c6efa5edf"
-            name="MessageOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="00f6b327-e651-4b4d-b126-01c297b96f25"
-            name="MessageOccurrenceSpecification5">
-            <covered>
-              <lifelineMoniker
-                Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-                LastKnownName="Lifeline1"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <interactionUse
-            Id="afee9de8-376c-4abc-a882-2cd36b779cfe"
-            name="InteractionUse2">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </coveredLifelines>
-            <interactionUseOccurrenceSpecifications>
-              <interactionUseOccurrenceSpecificationMoniker
-                Id="ffd211be-9e5f-4bf7-9b00-35699502e414"
-                LastKnownName="InteractionUseOccurrenceSpecification6"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </interactionUseOccurrenceSpecifications>
-          </interactionUse>
-          <interactionUseOccurrenceSpecification
-            Id="ffd211be-9e5f-4bf7-9b00-35699502e414"
-            name="InteractionUseOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </interactionUseOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="dedb9841-4874-408d-908b-4d1aae88cdbd"
-            name="BehaviorExecutionSpecification4">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-                LastKnownName="Lifeline1"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="25661c46-a690-4db3-b695-5decb994fc70"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="3978a7b3-6a2b-47b9-985a-f417eb12d3d9"
-                LastKnownName="ExecutionOccurrenceSpecification7"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="d6c63f5e-e790-42be-b0cd-9634d59580ba"
-                LastKnownName="MessageOccurrenceSpecification12"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="b3ee2b19-c9f7-4ba7-855a-c3b311a26ef1"
-                LastKnownName="MessageOccurrenceSpecification13"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="3978a7b3-6a2b-47b9-985a-f417eb12d3d9"
-            name="ExecutionOccurrenceSpecification7">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="4e5d368f-bf8d-463d-a532-f156583e9981"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="StockManagementSystem.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-                LastKnownName="Lifeline1"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="86623282-7591-4fc6-ba1b-4bf0fae96270"
-            name="MessageOccurrenceSpecification11">
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="d6c63f5e-e790-42be-b0cd-9634d59580ba"
-            name="MessageOccurrenceSpecification12">
-            <covered>
-              <lifelineMoniker
-                Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-                LastKnownName="Lifeline1"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="b3ee2b19-c9f7-4ba7-855a-c3b311a26ef1"
-            name="MessageOccurrenceSpecification13">
-            <covered>
-              <lifelineMoniker
-                Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-                LastKnownName="Lifeline1"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="705db2c5-b988-4da0-ac5d-5c3c47f88b4e"
-            name="MessageOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="25661c46-a690-4db3-b695-5decb994fc70"
-            name="ExecutionOccurrenceSpecification8">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="95359edc-6a27-4446-b52f-ab47e9321424"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="StockManagementSystem.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-                LastKnownName="Lifeline1"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="70efd5fe-fd92-43f9-b654-20ce7985c8ab"
-            name="ExecutionOccurrenceSpecification4">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="a1d572bc-0dd5-4898-b30c-b070e060e012"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="StockManagementSystem.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="d4c09df0-6b1a-47f0-90bb-98fdc0181d5b"
+            Id="9eae0754-c292-410f-949e-2fbf98899940"
             name="BehaviorExecutionSpecification3">
             <coveredLifelines>
               <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
+                Id="81827ca5-636c-430b-83ae-73159fa58b96"
+                LastKnownName="branch : Branch"
                 LastKnownLocation="StockManagementSystem.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="dd1d3699-ba42-4672-890e-3b0b84e39a3d"
+                Id="772b8a48-6f39-44f7-9c48-83e377f40eea"
                 LastKnownName="ExecutionOccurrenceSpecification6"
                 LastKnownLocation="StockManagementSystem.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="fb27a4b4-8db0-4a55-8819-2498fe113828"
+                Id="02e46a64-5796-4366-ada9-23b914db27ad"
                 LastKnownName="ExecutionOccurrenceSpecification5"
                 LastKnownLocation="StockManagementSystem.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="3ab1e4a7-9013-4ef5-aad5-ea07980de8c2"
+                Id="ce5a2b87-89c3-4517-8808-1984ed548b0d"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9173ce3c-712b-4d0d-a7da-38ffa3841921"
                 LastKnownName="MessageOccurrenceSpecification8"
                 LastKnownLocation="StockManagementSystem.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="3e49e796-5a34-48b8-b5e0-0fa6be19112b"
-                LastKnownName="MessageOccurrenceSpecification9"
+                Id="a795439b-3df8-41a6-873f-2bc355e48b8b"
+                LastKnownName="MessageOccurrenceSpecification11"
                 LastKnownLocation="StockManagementSystem.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="fb27a4b4-8db0-4a55-8819-2498fe113828"
+            Id="02e46a64-5796-4366-ada9-23b914db27ad"
             name="ExecutionOccurrenceSpecification5">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="ca74fa83-9ea1-4a8c-8e5c-01e4b02c8c59"
+                  Id="075d1941-6448-47bf-ba53-bc0325d8293f"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="StockManagementSystem.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
+                Id="81827ca5-636c-430b-83ae-73159fa58b96"
+                LastKnownName="branch : Branch"
                 LastKnownLocation="StockManagementSystem.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="7fdd2c1f-e029-4237-a1e4-c997400c713e"
+            Id="26cbe690-4ca8-44c5-8010-735660915afb"
+            name="MessageOccurrenceSpecification6">
+            <event>
+              <sendOperationEventMoniker
+                Id="25380ac9-6bb7-4de3-bb7b-3a515a209223"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0b2e34c8-3f74-4f25-83d6-2f886b1642d8"
+                LastKnownName="user : User"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ce5a2b87-89c3-4517-8808-1984ed548b0d"
             name="MessageOccurrenceSpecification7">
+            <event>
+              <receiveOperationEventMoniker
+                Id="69c53691-3b9d-4ac6-b0a2-741c42ba030e"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </event>
             <covered>
               <lifelineMoniker
-                Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-                LastKnownName="Lifeline1"
+                Id="81827ca5-636c-430b-83ae-73159fa58b96"
+                LastKnownName="branch : Branch"
                 LastKnownLocation="StockManagementSystem.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="3ab1e4a7-9013-4ef5-aad5-ea07980de8c2"
-            name="MessageOccurrenceSpecification8">
-            <covered>
+          <behaviorExecutionSpecification
+            Id="1e043205-deca-48b7-88ae-102f36902eb2"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
               <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
+                Id="74a2e596-f213-4bd4-81e6-c2f18dd4b548"
+                LastKnownName="item : Item"
                 LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="3e49e796-5a34-48b8-b5e0-0fa6be19112b"
-            name="MessageOccurrenceSpecification9">
-            <covered>
-              <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="5ca6166f-bc2c-4cfd-95ef-ed43f2e2c9fa"
+                LastKnownName="ExecutionOccurrenceSpecification8"
                 LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="06432736-112d-4312-9d2a-f8b3db6ed397"
-            name="MessageOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-                LastKnownName="Lifeline1"
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="261bd7c8-e6e6-4b60-a7df-9943270b07f7"
+                LastKnownName="ExecutionOccurrenceSpecification7"
                 LastKnownLocation="StockManagementSystem.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="57f4d7e2-4014-4037-8f6c-96402d7c737c"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="a141a590-4011-4460-b6ce-8f79bd38eeb4"
+                LastKnownName="InteractionUseOccurrenceSpecification13"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a6b91dff-374a-465a-b1e9-5d92db7121d4"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="dd1d3699-ba42-4672-890e-3b0b84e39a3d"
-            name="ExecutionOccurrenceSpecification6">
+            Id="261bd7c8-e6e6-4b60-a7df-9943270b07f7"
+            name="ExecutionOccurrenceSpecification7">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="6eff6dd8-baea-4616-a59e-1a727943ce47"
+                  Id="6c14719b-f5aa-4eb1-8dec-5e54ba249879"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="StockManagementSystem.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-                LastKnownName="ds;f : Lifeline2"
+                Id="74a2e596-f213-4bd4-81e6-c2f18dd4b548"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9173ce3c-712b-4d0d-a7da-38ffa3841921"
+            name="MessageOccurrenceSpecification8">
+            <event>
+              <sendOperationEventMoniker
+                Id="51198374-0078-4a9d-a664-748e7705fb24"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="81827ca5-636c-430b-83ae-73159fa58b96"
+                LastKnownName="branch : Branch"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="57f4d7e2-4014-4037-8f6c-96402d7c737c"
+            name="MessageOccurrenceSpecification9">
+            <event>
+              <receiveOperationEventMoniker
+                Id="2a7f2aff-956d-4ef1-b29d-505c44bf9568"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="74a2e596-f213-4bd4-81e6-c2f18dd4b548"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <interactionUse
+            Id="845a33a5-75ce-4696-acec-93f684815b1b"
+            name="Choose Item Type">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="74a2e596-f213-4bd4-81e6-c2f18dd4b548"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <lifelineMoniker
+                Id="76908290-b821-421b-b053-186f0e60256e"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </coveredLifelines>
+            <interactionUseOccurrenceSpecifications>
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="a141a590-4011-4460-b6ce-8f79bd38eeb4"
+                LastKnownName="InteractionUseOccurrenceSpecification13"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="5b49c7fb-1bd7-4ee6-a9bb-39f6e867e530"
+                LastKnownName="InteractionUseOccurrenceSpecification14"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </interactionUseOccurrenceSpecifications>
+          </interactionUse>
+          <interactionUseOccurrenceSpecification
+            Id="a141a590-4011-4460-b6ce-8f79bd38eeb4"
+            name="InteractionUseOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="74a2e596-f213-4bd4-81e6-c2f18dd4b548"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="5b49c7fb-1bd7-4ee6-a9bb-39f6e867e530"
+            name="InteractionUseOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="76908290-b821-421b-b053-186f0e60256e"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a795439b-3df8-41a6-873f-2bc355e48b8b"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="81827ca5-636c-430b-83ae-73159fa58b96"
+                LastKnownName="branch : Branch"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a6b91dff-374a-465a-b1e9-5d92db7121d4"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="74a2e596-f213-4bd4-81e6-c2f18dd4b548"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="5ca6166f-bc2c-4cfd-95ef-ed43f2e2c9fa"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b709914d-97ca-4319-bda0-1bfce983c6d1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="74a2e596-f213-4bd4-81e6-c2f18dd4b548"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="772b8a48-6f39-44f7-9c48-83e377f40eea"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="065131d5-2bea-4216-99d6-9ced9176cd0c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="81827ca5-636c-430b-83ae-73159fa58b96"
+                LastKnownName="branch : Branch"
                 LastKnownLocation="StockManagementSystem.uml" />
             </covered>
           </executionOccurrenceSpecification>
         </fragments>
         <lifelines>
           <lifeline
-            Id="6154795c-d932-4a44-9f56-a91d0a54b09c"
-            name="Lifeline1"
-            isActor="false"
-            lifelineDisplayName="Lifeline1">
+            Id="0b2e34c8-3f74-4f25-83d6-2f886b1642d8"
+            name="user : User"
+            isActor="true"
+            lifelineDisplayName="user : User">
+            <represents>
+              <propertyMoniker
+                Id="5fb0d4ec-48c2-4e8f-a8f5-058cb5f73ee8"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </represents>
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="cb4632f0-91ef-4e74-8059-4688989cf20b"
-                LastKnownName="MessageOccurrenceSpecification1"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="a0c6f75e-4041-4710-9504-37a4347f9580"
-                LastKnownName="MessageOccurrenceSpecification4"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="00f6b327-e651-4b4d-b126-01c297b96f25"
-                LastKnownName="MessageOccurrenceSpecification5"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="3978a7b3-6a2b-47b9-985a-f417eb12d3d9"
-                LastKnownName="ExecutionOccurrenceSpecification7"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="25661c46-a690-4db3-b695-5decb994fc70"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="7fdd2c1f-e029-4237-a1e4-c997400c713e"
-                LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="06432736-112d-4312-9d2a-f8b3db6ed397"
-                LastKnownName="MessageOccurrenceSpecification10"
+                Id="26cbe690-4ca8-44c5-8010-735660915afb"
+                LastKnownName="MessageOccurrenceSpecification6"
                 LastKnownLocation="StockManagementSystem.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
-            Id="cb2502dc-dc02-4342-9a94-6afaf20ee7b6"
-            name="ds;f : Lifeline2"
+            Id="81827ca5-636c-430b-83ae-73159fa58b96"
+            name="branch : Branch"
             isActor="false"
-            lifelineDisplayName="ds;f : Lifeline2">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="fd1944b9-47a3-4e72-ad11-133d0d70dad6"
-                name="TextTemplateBindings"
-                profile="TextTemplateBindings">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="8c7afac6-5e58-482d-bbdc-31b498d65a83">
-                    <propertyInstance
-                      Id="86c48d4c-6a73-4617-b113-53d5b28d5c05"
-                      name="Alias" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="136fc688-9898-4d7c-80c0-1bf2816a1bb4">
-                    <propertyInstance
-                      Id="6a58ebee-9a34-40b1-adc8-704d4b3b29bf"
-                      name="TemplateFilePath" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a11d5099-f4dd-419b-8d58-ac9a3f2cfa62">
-                    <propertyInstance
-                      Id="01a840ab-c21b-4de9-96fc-f390f3210204"
-                      name="ProjectPath" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="48b10302-4283-468a-887d-03c867752033">
-                    <propertyInstance
-                      Id="f3e8e53f-707f-4b5d-8029-777ea6972362"
-                      name="TargetDirectory" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b76ceef2-d324-4995-a031-a760518609ad">
-                    <propertyInstance
-                      Id="45e598ec-a06d-45bd-a88a-ba5ea75d8d25"
-                      name="TargetName" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f902280c-0457-4213-bcae-9ade3151971a">
-                    <propertyInstance
-                      Id="57810619-318d-42e3-b02b-c65b243d2bd3"
-                      name="Overwrite" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="034b5d06-5402-4a60-a2a2-3e2c147a61a5">
-                    <propertyInstance
-                      Id="d12fe11f-e050-4a57-b8e2-e4174fee4506"
-                      name="Parameters" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
+            lifelineDisplayName="branch : Branch">
+            <represents>
+              <propertyMoniker
+                Id="8f0f447e-2f99-421f-9305-56e301258121"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </represents>
             <topLevelOccurrences>
-              <interactionUseOccurrenceSpecificationMoniker
-                Id="455e1292-89e1-4331-9359-8c9911e8d3a9"
-                LastKnownName="InteractionUseOccurrenceSpecification5"
-                LastKnownLocation="StockManagementSystem.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="8200f548-5f55-4b96-ae9b-01cca03fa47d"
-                LastKnownName="ExecutionOccurrenceSpecification1"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="fc6aa104-6201-4f2b-a764-292de90e60ce"
-                LastKnownName="ExecutionOccurrenceSpecification2"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="5c505230-d398-4249-8669-c0b291c3db7a"
-                LastKnownName="ExecutionOccurrenceSpecification3"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="70efd5fe-fd92-43f9-b654-20ce7985c8ab"
-                LastKnownName="ExecutionOccurrenceSpecification4"
-                LastKnownLocation="StockManagementSystem.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="fb27a4b4-8db0-4a55-8819-2498fe113828"
+                Id="02e46a64-5796-4366-ada9-23b914db27ad"
                 LastKnownName="ExecutionOccurrenceSpecification5"
                 LastKnownLocation="StockManagementSystem.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="dd1d3699-ba42-4672-890e-3b0b84e39a3d"
+                Id="772b8a48-6f39-44f7-9c48-83e377f40eea"
                 LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="74a2e596-f213-4bd4-81e6-c2f18dd4b548"
+            name="item : Item"
+            isActor="false"
+            lifelineDisplayName="item : Item">
+            <represents>
+              <propertyMoniker
+                Id="78fe8387-3c48-428c-98d0-84c3cbeb7d18"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="261bd7c8-e6e6-4b60-a7df-9943270b07f7"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5ca6166f-bc2c-4cfd-95ef-ed43f2e2c9fa"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="76908290-b821-421b-b053-186f0e60256e"
+            name="type : Type"
+            isActor="false"
+            lifelineDisplayName="type : Type">
+            <represents>
+              <propertyMoniker
+                Id="d146496d-0d0c-49da-a3b5-6dfac06850a3"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="5b49c7fb-1bd7-4ee6-a9bb-39f6e867e530"
+                LastKnownName="InteractionUseOccurrenceSpecification14"
                 LastKnownLocation="StockManagementSystem.uml" />
             </topLevelOccurrences>
           </lifeline>
         </lifelines>
         <messages>
           <message
-            Id="282f42bf-7d49-4777-986a-6f352894af3b"
-            name="Message1"
+            Id="f309875d-7750-4678-8a53-a01dfa00a5aa"
+            name="Add new item"
             messageKind="Complete"
-            messageSort="SynchCall"
+            messageSort="AsynchCall"
+            createSelfMessage="false"
+            signatureText="+ addNewItem(category, type)">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="26cbe690-4ca8-44c5-8010-735660915afb"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ce5a2b87-89c3-4517-8808-1984ed548b0d"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0c245f63-6b55-4a9b-8f26-b4c0ecb10082"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false"
+            signatureText="+ createNewItem(type)">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9173ce3c-712b-4d0d-a7da-38ffa3841921"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="57f4d7e2-4014-4037-8f6c-96402d7c737c"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="288f7202-f94b-4d28-9921-eaae7c37dbf7"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="cb4632f0-91ef-4e74-8059-4688989cf20b"
+                Id="a6b91dff-374a-465a-b1e9-5d92db7121d4"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a795439b-3df8-41a6-873f-2bc355e48b8b"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="9cf0f0c8-9f15-4fba-9d18-edb24354dadd"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="c2ca5c42-07bf-4064-815c-39e104ca7da6"
+                LastKnownName="System"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="816f7cec-3dce-442d-99c0-e06056974f13"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="8363dc58-3efe-49de-84f9-a5d0c4a8b094"
+                LastKnownName="User"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8f0f447e-2f99-421f-9305-56e301258121"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="eb8307ec-f1d6-48aa-9040-d65b948d8312"
+                LastKnownName="Branch"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5fb0d4ec-48c2-4e8f-a8f5-058cb5f73ee8"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="8363dc58-3efe-49de-84f9-a5d0c4a8b094"
+                LastKnownName="User"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="78fe8387-3c48-428c-98d0-84c3cbeb7d18"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="006ee690-0257-417d-b711-36d1e6915722"
+                LastKnownName="Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="de17fa08-af8e-43bb-9a9b-924827960568"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="1df7a913-24b9-4bd7-83c5-cac50141ca0e"
+                LastKnownName="Property"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d146496d-0d0c-49da-a3b5-6dfac06850a3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="51bdeec4-625c-4b30-be4f-6c09c274c0b8"
+                LastKnownName="Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="075d1941-6448-47bf-ba53-bc0325d8293f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="065131d5-2bea-4216-99d6-9ced9176cd0c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6c14719b-f5aa-4eb1-8dec-5e54ba249879"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b709914d-97ca-4319-bda0-1bfce983c6d1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="31f5816d-f673-4b4a-be54-95a068d255cc"
+        name="ChooseItemProperty"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <lifelines>
+          <lifeline
+            Id="215d3c02-ec29-4c6a-bad1-2afb6b07ae9b"
+            name="item : Item"
+            isActor="false"
+            lifelineDisplayName="item : Item">
+            <represents>
+              <propertyMoniker
+                Id="ccb9511d-7be4-49a9-9221-ed44c6c9320f"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </represents>
+          </lifeline>
+          <lifeline
+            Id="d88c4c71-fc5e-47f5-8e10-92242a5e7ccd"
+            name="property : Property"
+            isActor="false"
+            lifelineDisplayName="property : Property">
+            <represents>
+              <propertyMoniker
+                Id="bfae2f06-403d-47cc-b7f3-70f640085a29"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </represents>
+          </lifeline>
+          <lifeline
+            Id="24047ab2-3ebc-47aa-9a01-9dd4a47be511"
+            name="propertiesSet : PropertiesSet"
+            isActor="false"
+            lifelineDisplayName="propertiesSet : PropertiesSet">
+            <represents>
+              <propertyMoniker
+                Id="faf74120-a8ef-4953-8f4e-2653fcbf6579"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </represents>
+          </lifeline>
+        </lifelines>
+        <ownedAttributesInternal>
+          <property
+            Id="ccb9511d-7be4-49a9-9221-ed44c6c9320f"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="006ee690-0257-417d-b711-36d1e6915722"
+                LastKnownName="Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bfae2f06-403d-47cc-b7f3-70f640085a29"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="1df7a913-24b9-4bd7-83c5-cac50141ca0e"
+                LastKnownName="Property"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="faf74120-a8ef-4953-8f4e-2653fcbf6579"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5"
+                LastKnownName="PropertiesSet"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="e1cb4d47-c24e-49b8-8437-7683d64a0be1"
+        name="ChooseItemType"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <combinedFragment
+            Id="7ce9c35b-4672-4ec0-885f-b82ec3a5176c"
+            name="CombinedFragment1"
+            interactionOperator="Alt">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="1ed45a67-d7e1-4905-aaf9-909facc16c52"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+                    LastKnownName="item : Item"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                  <lifelineMoniker
+                    Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                    LastKnownName="type : Type"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="c649ee07-bd5b-4b64-b18a-67ace3f6494f"
+                    guardText="type does not already exist" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="e735de5e-2e28-4126-b5ec-452ef1554897"
+                    LastKnownName="OperandOccurrenceSpecification1"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="c64b4ce2-2158-4492-b2c0-2d7ddf0126e7"
+                    LastKnownName="OperandOccurrenceSpecification2"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="ef5e6010-9461-4ef2-92ac-b1c253eb6376"
+                    LastKnownName="OperandOccurrenceSpecification3"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="b1d21dbd-171d-4857-bcba-e0a9d255060e"
+                    LastKnownName="OperandOccurrenceSpecification4"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+              <interactionOperand
+                Id="b28f6083-9acc-41c1-89c6-35cb8cf2c7e2"
+                name="InteractionOperand2">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+                    LastKnownName="item : Item"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                  <lifelineMoniker
+                    Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                    LastKnownName="type : Type"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="4fc00ab9-b819-481f-8bf2-d5791769368b"
+                    guardText="type already exists" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="2d4c2157-b80c-4dce-9c67-caf9c0ccfd39"
+                    LastKnownName="OperandOccurrenceSpecification5"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="89f321e3-45ba-48ec-b92c-31568fde7d10"
+                    LastKnownName="OperandOccurrenceSpecification6"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="504aef90-863d-4dee-8dbd-6effd6b8e4f8"
+                    LastKnownName="OperandOccurrenceSpecification7"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="161a1f13-3bde-4714-b358-f730d31dd30a"
+                    LastKnownName="OperandOccurrenceSpecification8"
+                    LastKnownLocation="StockManagementSystem.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="e735de5e-2e28-4126-b5ec-452ef1554897"
+            name="OperandOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="ef5e6010-9461-4ef2-92ac-b1c253eb6376"
+            name="OperandOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="b2b4c329-6170-44bd-bf35-3d5fe22ceaa6"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="74fb7afa-5213-435e-9c05-8d2dac0c71f5"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="784b4785-7abf-4363-8f74-f209f614237b"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="a55ad625-8359-41fb-91c0-0ac4063a2880"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="25addc19-0892-4c2b-8c5a-adf1cf65ab46"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="784b4785-7abf-4363-8f74-f209f614237b"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3042c3a3-c2b6-4d52-876b-abd990e996c8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="64fd8077-dc0b-4e12-a5a5-013eb95bf1d1"
+            name="MessageOccurrenceSpecification1">
+            <event>
+              <sendOperationEventMoniker
+                Id="a184f3a2-f8fc-458f-b915-e1f37d557999"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a55ad625-8359-41fb-91c0-0ac4063a2880"
+            name="MessageOccurrenceSpecification2">
+            <event>
+              <receiveOperationEventMoniker
+                Id="6e20ef0b-8b24-4478-b95f-81b571fe723c"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="25addc19-0892-4c2b-8c5a-adf1cf65ab46"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c2ad0378-ca6f-4d71-a309-9353ca555647"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="74fb7afa-5213-435e-9c05-8d2dac0c71f5"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f8536ed9-2e0d-455e-b1ed-f088518f127f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c64b4ce2-2158-4492-b2c0-2d7ddf0126e7"
+            name="OperandOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="b1d21dbd-171d-4857-bcba-e0a9d255060e"
+            name="OperandOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="2d4c2157-b80c-4dce-9c67-caf9c0ccfd39"
+            name="OperandOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="504aef90-863d-4dee-8dbd-6effd6b8e4f8"
+            name="OperandOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="aa14fb15-20f5-4b3f-9719-641830db808b"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="92b32ea8-d9fc-44a3-9c89-bf6ac63255c4"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="68c5c9b5-fccc-47c3-8e28-3faacb5b53b4"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="75f2f744-e4dd-473a-b285-7be4c6b0344f"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="68c5c9b5-fccc-47c3-8e28-3faacb5b53b4"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8dd9b288-b680-4c0c-9682-6e2f9d1b776b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c676b930-7685-44d0-8883-be2ba4ae52c1"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="75f2f744-e4dd-473a-b285-7be4c6b0344f"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="92b32ea8-d9fc-44a3-9c89-bf6ac63255c4"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="072335a1-1b7c-4a42-b94d-c752ca245746"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="89f321e3-45ba-48ec-b92c-31568fde7d10"
+            name="OperandOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+                LastKnownName="type : Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="161a1f13-3bde-4714-b358-f730d31dd30a"
+            name="OperandOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+                LastKnownName="item : Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="0951f08c-1797-4770-81da-2a5fb85f7be1"
+            name="item : Item"
+            isActor="false"
+            lifelineDisplayName="item : Item">
+            <represents>
+              <propertyMoniker
+                Id="9e0ab33f-edbc-4789-a131-cdb676b7026e"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="ef5e6010-9461-4ef2-92ac-b1c253eb6376"
+                LastKnownName="OperandOccurrenceSpecification3"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="64fd8077-dc0b-4e12-a5a5-013eb95bf1d1"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c2ad0378-ca6f-4d71-a309-9353ca555647"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="b1d21dbd-171d-4857-bcba-e0a9d255060e"
+                LastKnownName="OperandOccurrenceSpecification4"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="504aef90-863d-4dee-8dbd-6effd6b8e4f8"
+                LastKnownName="OperandOccurrenceSpecification7"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c676b930-7685-44d0-8883-be2ba4ae52c1"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="161a1f13-3bde-4714-b358-f730d31dd30a"
+                LastKnownName="OperandOccurrenceSpecification8"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="456ed93b-25b3-4fe7-8b52-d72a1837ea78"
+            name="type : Type"
+            isActor="false"
+            lifelineDisplayName="type : Type">
+            <represents>
+              <propertyMoniker
+                Id="ae703e83-aa8b-40b3-b746-3488c18615c5"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="e735de5e-2e28-4126-b5ec-452ef1554897"
+                LastKnownName="OperandOccurrenceSpecification1"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="784b4785-7abf-4363-8f74-f209f614237b"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="74fb7afa-5213-435e-9c05-8d2dac0c71f5"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="c64b4ce2-2158-4492-b2c0-2d7ddf0126e7"
+                LastKnownName="OperandOccurrenceSpecification2"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="2d4c2157-b80c-4dce-9c67-caf9c0ccfd39"
+                LastKnownName="OperandOccurrenceSpecification5"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="68c5c9b5-fccc-47c3-8e28-3faacb5b53b4"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="92b32ea8-d9fc-44a3-9c89-bf6ac63255c4"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="StockManagementSystem.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="89f321e3-45ba-48ec-b92c-31568fde7d10"
+                LastKnownName="OperandOccurrenceSpecification6"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="f8690025-056c-46fe-af9c-6db8ff15166d"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false"
+            signatureText="+ createNewType(properties, category)">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="64fd8077-dc0b-4e12-a5a5-013eb95bf1d1"
                 LastKnownName="MessageOccurrenceSpecification1"
                 LastKnownLocation="StockManagementSystem.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="e317ab4e-f487-40b9-ba21-0fd5f72724eb"
+                Id="a55ad625-8359-41fb-91c0-0ac4063a2880"
                 LastKnownName="MessageOccurrenceSpecification2"
                 LastKnownLocation="StockManagementSystem.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="e0457fb1-f804-45c6-890d-0a15430876b4"
-            name="&lt;&lt;return&gt;&gt;"
+            Id="ea086c99-3842-499b-9606-9b8fad535e5f"
+            name="&lt;&lt;return id&gt;&gt; "
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="9c18c3b0-665d-4bfa-ade3-e7631acf6b08"
+                Id="25addc19-0892-4c2b-8c5a-adf1cf65ab46"
                 LastKnownName="MessageOccurrenceSpecification3"
                 LastKnownLocation="StockManagementSystem.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="a0c6f75e-4041-4710-9504-37a4347f9580"
+                Id="c2ad0378-ca6f-4d71-a309-9353ca555647"
                 LastKnownName="MessageOccurrenceSpecification4"
                 LastKnownLocation="StockManagementSystem.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="fca36c65-5e91-49be-bb19-374915310568"
-            name="Message2"
+            Id="e8963acd-17ac-437c-9c8d-577a4384e762"
+            name="chooseExistingType"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="00f6b327-e651-4b4d-b126-01c297b96f25"
+                Id="c676b930-7685-44d0-8883-be2ba4ae52c1"
                 LastKnownName="MessageOccurrenceSpecification5"
                 LastKnownLocation="StockManagementSystem.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="00c5753f-29a2-4bdd-a875-a48c6efa5edf"
+                Id="75f2f744-e4dd-473a-b285-7be4c6b0344f"
                 LastKnownName="MessageOccurrenceSpecification6"
                 LastKnownLocation="StockManagementSystem.uml" />
             </receiveEvent>
           </message>
-          <message
-            Id="23528545-7823-4641-8987-4100482dd1b9"
-            name="hello"
-            messageKind="Complete"
-            messageSort="CreateMessage"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="86623282-7591-4fc6-ba1b-4bf0fae96270"
-                LastKnownName="MessageOccurrenceSpecification11"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="d6c63f5e-e790-42be-b0cd-9634d59580ba"
-                LastKnownName="MessageOccurrenceSpecification12"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="fb1eaa7a-e4b1-4c89-b6c3-503a2b7ae496"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="b3ee2b19-c9f7-4ba7-855a-c3b311a26ef1"
-                LastKnownName="MessageOccurrenceSpecification13"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="705db2c5-b988-4da0-ac5d-5c3c47f88b4e"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="a468603e-a61b-4ad0-b6c4-60162401c24c"
-            name="&lt;&lt;create&gt;&gt;"
-            messageKind="Complete"
-            messageSort="CreateMessage"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="7fdd2c1f-e029-4237-a1e4-c997400c713e"
-                LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="3ab1e4a7-9013-4ef5-aad5-ea07980de8c2"
-                LastKnownName="MessageOccurrenceSpecification8"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="0e18f758-d53d-4fe3-9bb9-6c8744470a42"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="3e49e796-5a34-48b8-b5e0-0fa6be19112b"
-                LastKnownName="MessageOccurrenceSpecification9"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="06432736-112d-4312-9d2a-f8b3db6ed397"
-                LastKnownName="MessageOccurrenceSpecification10"
-                LastKnownLocation="StockManagementSystem.uml" />
-            </receiveEvent>
-          </message>
         </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="9e0ab33f-edbc-4789-a131-cdb676b7026e"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="006ee690-0257-417d-b711-36d1e6915722"
+                LastKnownName="Item"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ae703e83-aa8b-40b3-b746-3488c18615c5"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="51bdeec4-625c-4b30-be4f-6c09c274c0b8"
+                LastKnownName="Type"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
       </interaction>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="7180d83c-1987-48ea-b269-90e911176c0f"
+        Id="3042c3a3-c2b6-4d52-876b-abd990e996c8"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="79a669a7-05b3-4f23-9cc6-2c0d8fd34028"
+        Id="f8536ed9-2e0d-455e-b1ed-f088518f127f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <sendOperationEvent
+        Id="a184f3a2-f8fc-458f-b915-e1f37d557999">
+        <operation>
+          <operationMoniker
+            Id="0b48fe73-e045-4003-aa48-d2012bc55a0b"
+            LastKnownName="createNewType"
+            LastKnownLocation="StockManagementSystem.uml" />
+        </operation>
+      </sendOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <receiveOperationEvent
+        Id="6e20ef0b-8b24-4478-b95f-81b571fe723c">
+        <operation>
+          <operationMoniker
+            Id="0b48fe73-e045-4003-aa48-d2012bc55a0b"
+            LastKnownName="createNewType"
+            LastKnownLocation="StockManagementSystem.uml" />
+        </operation>
+      </receiveOperationEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8dd9b288-b680-4c0c-9682-6e2f9d1b776b"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="01718eaa-7048-4d21-93d6-fbee43b258a5"
+        Id="072335a1-1b7c-4a42-b94d-c752ca245746"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <executionEvent
-        Id="a1d572bc-0dd5-4898-b30c-b070e060e012"
-        name="ExecutionEvent" />
+      <sendOperationEvent
+        Id="51198374-0078-4a9d-a664-748e7705fb24">
+        <operation>
+          <operationMoniker
+            Id="e3c040eb-e5c5-45bc-b34a-6c99c1e19c30"
+            LastKnownName="createNewItem"
+            LastKnownLocation="StockManagementSystem.uml" />
+        </operation>
+      </sendOperationEvent>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <executionEvent
-        Id="ca74fa83-9ea1-4a8c-8e5c-01e4b02c8c59"
-        name="ExecutionEvent" />
+      <receiveOperationEvent
+        Id="2a7f2aff-956d-4ef1-b29d-505c44bf9568">
+        <operation>
+          <operationMoniker
+            Id="e3c040eb-e5c5-45bc-b34a-6c99c1e19c30"
+            LastKnownName="createNewItem"
+            LastKnownLocation="StockManagementSystem.uml" />
+        </operation>
+      </receiveOperationEvent>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <executionEvent
-        Id="6eff6dd8-baea-4616-a59e-1a727943ce47"
-        name="ExecutionEvent" />
+      <sendOperationEvent
+        Id="25380ac9-6bb7-4de3-bb7b-3a515a209223">
+        <operation>
+          <operationMoniker
+            Id="9a848e60-8c62-467e-9679-20b59a1c368b"
+            LastKnownName="addNewItem"
+            LastKnownLocation="StockManagementSystem.uml" />
+        </operation>
+      </sendOperationEvent>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <executionEvent
-        Id="4e5d368f-bf8d-463d-a532-f156583e9981"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="95359edc-6a27-4446-b52f-ab47e9321424"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <subsystem
-        Id="54af35fe-8649-40f9-a7dc-2e4fe3048410"
-        name="Subsystem2"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false" />
+      <receiveOperationEvent
+        Id="69c53691-3b9d-4ac6-b0a2-741c42ba030e">
+        <operation>
+          <operationMoniker
+            Id="9a848e60-8c62-467e-9679-20b59a1c368b"
+            LastKnownName="addNewItem"
+            LastKnownLocation="StockManagementSystem.uml" />
+        </operation>
+      </receiveOperationEvent>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

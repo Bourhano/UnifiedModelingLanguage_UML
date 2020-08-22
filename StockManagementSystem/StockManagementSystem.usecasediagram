@@ -22,6 +22,13 @@
         <useCaseMoniker Id="f82fd6d3-2c9f-4d3f-a9fe-d1525c1deddd" LastKnownName="Define Item Operation" />
       </annotatedElements>
     </comment>
+    <comment Id="81848db9-5a2e-4fbe-a640-699f6e883e67">
+      <elementDefinition Id="8c35cdef-c2ce-4be9-b601-6ff776cd4f44" />
+      <body>Create New Property depends on the existance of a prior Property Fromat. Hence the dependency relation exists.</body>
+      <annotatedElements>
+        <useCaseMoniker Id="b215d445-47e1-4c1f-a689-3b25c554ccd2" LastKnownName="Create New Property" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <packagedElements>
     <useCaseModelRootHasTypes>

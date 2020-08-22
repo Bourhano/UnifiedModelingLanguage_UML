@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="824c8701-c05a-447e-9ec9-45bd509a7c88" name="ChooseItemProperty" linkedPackageId="26a95f0e-533c-4937-b11a-b0ab532c29fc" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="70762ec1-d5c9-4aba-a640-ec14f2a8f835">
+      <profileInstance Id="f1fffafb-4519-4b53-9808-e89a5b2c2436" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="07900a60-0f3a-4842-8762-1aad8abd1ba9">
+      <profileInstance Id="cf64a4f8-e06f-47a2-b070-4cef8426c181" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="889ed60e-3803-4ca5-8e5e-32cb7c918116">
+      <profileInstance Id="ee260400-d278-46f9-b838-d80af3ffbc85" name="TextTemplateBindings">
+        <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
+      </profileInstance>
+      <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="ef73a267-8dc6-49d9-8cb2-dd049d7c41e7" name="ChooseItemProperty" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="31f5816d-f673-4b4a-be54-95a068d255cc" />
+        <lifelines>
+          <lifeline Id="5467170f-d293-4f7a-bd60-10da8998e01e" name="item : Item" isActor="false" lifelineDisplayName="item : Item">
+            <elementDefinition Id="215d3c02-ec29-4c6a-bad1-2afb6b07ae9b" />
+            <represents>
+              <propertyMoniker Id="92b7b8ee-397f-4905-9367-ef948632616b" />
+            </represents>
+          </lifeline>
+          <lifeline Id="153f9d16-9a2f-42ce-8e7c-486a61076a47" name="property : Property" isActor="false" lifelineDisplayName="property : Property">
+            <elementDefinition Id="d88c4c71-fc5e-47f5-8e10-92242a5e7ccd" />
+            <represents>
+              <propertyMoniker Id="165c73c1-8f24-4e9c-b233-811d646bffd7" />
+            </represents>
+          </lifeline>
+          <lifeline Id="f5c90efd-c6a1-42ca-bef2-3982edbef2f9" name="propertiesSet : PropertiesSet" isActor="false" lifelineDisplayName="propertiesSet : PropertiesSet">
+            <elementDefinition Id="24047ab2-3ebc-47aa-9a01-9dd4a47be511" />
+            <represents>
+              <propertyMoniker Id="9fd8c624-295b-422f-9e51-ddafba066f9a" />
+            </represents>
+          </lifeline>
+        </lifelines>
+        <ownedAttributesInternal>
+          <property Id="92b7b8ee-397f-4905-9367-ef948632616b" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ccb9511d-7be4-49a9-9221-ed44c6c9320f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0c63c184-b9d9-4139-8216-2c9602c7d244" LastKnownName="Item" />
+            </type_NamedElement>
+          </property>
+          <property Id="165c73c1-8f24-4e9c-b233-811d646bffd7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bfae2f06-403d-47cc-b7f3-70f640085a29" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="04864fde-5e9f-44cf-a72a-0f3218498591" LastKnownName="Property" />
+            </type_NamedElement>
+          </property>
+          <property Id="9fd8c624-295b-422f-9e51-ddafba066f9a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="faf74120-a8ef-4953-8f4e-2653fcbf6579" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cb335d63-f72c-4924-b415-e16980ede9ff" LastKnownName="PropertiesSet" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0c63c184-b9d9-4139-8216-2c9602c7d244" name="Item" isAbstract="false" isLeaf="false" cachedFullName="StockManagementSystem::Item">
+        <elementDefinition Id="006ee690-0257-417d-b711-36d1e6915722" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="04864fde-5e9f-44cf-a72a-0f3218498591" name="Property" isAbstract="false" isLeaf="false" cachedFullName="StockManagementSystem::Property">
+        <elementDefinition Id="1df7a913-24b9-4bd7-83c5-cac50141ca0e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cb335d63-f72c-4924-b415-e16980ede9ff" name="PropertiesSet" isAbstract="false" isLeaf="false" cachedFullName="StockManagementSystem::PropertiesSet">
+        <elementDefinition Id="c97987f8-7b3e-487f-a50f-4fa10f1011b5" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="26a95f0e-533c-4937-b11a-b0ab532c29fc" name="StockManagementSystem">
+    <elementDefinition Id="fc60c8e6-7ae5-4030-8055-34d885e91f60" />
+  </package>
+</SequenceDesignerModel>

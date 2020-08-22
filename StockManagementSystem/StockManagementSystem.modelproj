@@ -22,6 +22,20 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="ChooseItemProperty.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ChooseItemProperty.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ChooseItemProperty.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="ChooseType.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ChooseType.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ChooseType.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="StockManagementSystem.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -35,6 +49,13 @@
     <Content Include="StockModelingSystemArchitecture.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>StockModelingSystemArchitecture.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="AddNewItem.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AddNewItem.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AddNewItem.sequencediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\StockManagementSystem.uml">

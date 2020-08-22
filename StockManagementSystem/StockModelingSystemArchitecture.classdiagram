@@ -145,6 +145,18 @@
           </operation>
           <operation Id="743ea071-3fc4-484d-820b-b9bda32420a3" name="addNewItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="9a848e60-8c62-467e-9679-20b59a1c368b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="eb247a36-7131-441c-b6c1-16fd2508baf5" name="category" direction="In" isUnique="false">
+                  <elementDefinition Id="32ed14ab-becf-41f3-910a-e99065839d44" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7f73325b-3d61-4969-b1e9-ca8cb561bc33" name="type" direction="In" isUnique="false">
+                  <elementDefinition Id="8350c5f2-616f-4654-8a9a-8834addaec2a" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
