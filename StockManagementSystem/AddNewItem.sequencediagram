@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="c62f556a-9f31-46d3-b45b-5a83a7cd7b02" name="AddNewItem" linkedPackageId="df6bdf71-c57c-4128-9974-76f6355eb2c0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="c62f556a-9f31-46d3-b45b-5a83a7cd7b02" name="AddNewItem" linkedPackageId="df6bdf71-c57c-4128-9974-76f6355eb2c0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <profileInstances>
     <packageHasProfileInstances Id="57129983-74de-4cb0-8a93-0809b72b2939">
       <profileInstance Id="48540fc4-e289-4d27-a968-d74a12fb7784" name="StandardProfileL2">
@@ -27,9 +27,16 @@
           <comment Id="4e0cd2d1-dc3b-44ba-b645-4c3c5938fe1a">
             <elementDefinition Id="3e2ed4a5-264a-437a-80d7-d4f56c6af3ae" />
             <body>Implementation explained in 
-ChooseItemType sd</body>
+ChooseType sd</body>
             <annotatedElements>
               <interactionUseMoniker Id="fabc4b60-d114-4ad1-943c-7fc5aef1c524" LastKnownName="Choose Item Type" />
+            </annotatedElements>
+          </comment>
+          <comment Id="7badf80b-2745-4647-8de4-b01aa96546da">
+            <elementDefinition Id="53b7266b-65b3-4afe-a4f2-0ad2cb680da8" />
+            <body>Check implementation in ChooseItemProperty sd</body>
+            <annotatedElements>
+              <interactionUseMoniker Id="c392822a-8efc-4cd2-8523-ab0329134cd1" LastKnownName="Choose Item Property" />
             </annotatedElements>
           </comment>
         </ownedCommentsInternal>
@@ -89,6 +96,9 @@ ChooseItemType sd</body>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker Id="cac2bda0-89da-4d6f-bc07-bf355d5daa24" LastKnownName="MessageOccurrenceSpecification9" />
               <interactionUseOccurrenceSpecificationMoniker Id="15f95bd8-e569-4a7e-9011-6a9cb3e03fdc" LastKnownName="InteractionUseOccurrenceSpecification13" />
+              <operandOccurrenceSpecificationMoniker Id="249e1f4f-3242-4786-9251-ccb70e274b16" LastKnownName="OperandOccurrenceSpecification21" />
+              <interactionUseOccurrenceSpecificationMoniker Id="6c2223fe-9681-430c-9fc9-74285885de30" LastKnownName="InteractionUseOccurrenceSpecification17" />
+              <operandOccurrenceSpecificationMoniker Id="1409a089-5311-4bfe-8622-7a89191163e1" LastKnownName="OperandOccurrenceSpecification22" />
               <messageOccurrenceSpecificationMoniker Id="fd6d53c1-29fb-46e2-99a7-79d7155c84fa" LastKnownName="MessageOccurrenceSpecification10" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
@@ -115,7 +125,12 @@ ChooseItemType sd</body>
               <lifelineMoniker Id="b54a5549-e19e-4a83-9b97-3cfd5b500fa0" LastKnownName="item : Item" />
             </covered>
           </messageOccurrenceSpecification>
-          <interactionUse Id="fabc4b60-d114-4ad1-943c-7fc5aef1c524" name="Choose Item Type">
+          <interactionUse Id="fabc4b60-d114-4ad1-943c-7fc5aef1c524" name="Choose Item Type" referredToFile="ChooseItemType">
+            <referencesInternal>
+              <reference Id="cc5cb498-5d25-425d-af36-c4fc40a634bf" handle="backplane://Backplane/Microsoft.VisualStudio.TeamArchitect.SequenceDesigner.ToolAdapter.SequenceServiceManager/5dc7294c-db72-4d56-a02a-4c2dfc70b33c\ChooseType.sequencediagram" tag="Definition Reference">
+                <elementDefinition Id="fcc4443b-adf9-46b5-a506-49dc3f3dcc73" />
+              </reference>
+            </referencesInternal>
             <elementDefinition Id="845a33a5-75ce-4696-acec-93f684815b1b" />
             <coveredLifelines>
               <lifelineMoniker Id="b54a5549-e19e-4a83-9b97-3cfd5b500fa0" LastKnownName="item : Item" />
@@ -138,6 +153,85 @@ ChooseItemType sd</body>
               <lifelineMoniker Id="56157876-daeb-4acf-84be-2aa22b72c908" LastKnownName="type : Type" />
             </covered>
           </interactionUseOccurrenceSpecification>
+          <combinedFragment Id="45d3888d-d4f8-4cbc-addf-cf3ca9ce4b66" name="CombinedFragment1" interactionOperator="Opt">
+            <elementDefinition Id="8c9a882c-400d-477a-9a0b-0fe2f6c2daff" />
+            <coveredLifelines>
+              <lifelineMoniker Id="b54a5549-e19e-4a83-9b97-3cfd5b500fa0" LastKnownName="item : Item" />
+              <lifelineMoniker Id="d2938616-c55a-42e9-b996-41e123731b96" LastKnownName="property : Property" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand Id="3c681dce-8070-44b6-bfcf-e6dd4b137491" name="InteractionOperand1">
+                <elementDefinition Id="58e9df0d-0efa-4a71-8300-f77fb87d2f80" />
+                <coveredLifelines>
+                  <lifelineMoniker Id="b54a5549-e19e-4a83-9b97-3cfd5b500fa0" LastKnownName="item : Item" />
+                  <lifelineMoniker Id="d2938616-c55a-42e9-b996-41e123731b96" LastKnownName="property : Property" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint Id="4cfc8f9d-52bb-4ed6-b73e-437d5f29d18c" guardText="if user wants to add property">
+                    <elementDefinition Id="ada33d4f-8aa4-4955-ad14-680817d93412" />
+                  </interactionConstraint>
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker Id="249e1f4f-3242-4786-9251-ccb70e274b16" LastKnownName="OperandOccurrenceSpecification21" />
+                  <operandOccurrenceSpecificationMoniker Id="1409a089-5311-4bfe-8622-7a89191163e1" LastKnownName="OperandOccurrenceSpecification22" />
+                  <operandOccurrenceSpecificationMoniker Id="5c981ff7-c615-4f22-8de4-51ce090ceb3d" LastKnownName="OperandOccurrenceSpecification23" />
+                  <operandOccurrenceSpecificationMoniker Id="8d707517-2056-44a8-a307-eca319689fa2" LastKnownName="OperandOccurrenceSpecification24" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification Id="5c981ff7-c615-4f22-8de4-51ce090ceb3d" name="OperandOccurrenceSpecification23">
+            <elementDefinition Id="da334af0-aaa8-4ebc-81e0-524a927ff273" />
+            <covered>
+              <lifelineMoniker Id="d2938616-c55a-42e9-b996-41e123731b96" LastKnownName="property : Property" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="249e1f4f-3242-4786-9251-ccb70e274b16" name="OperandOccurrenceSpecification21">
+            <elementDefinition Id="ac4ff618-89e2-499b-bb16-3d93d28fb6a5" />
+            <covered>
+              <lifelineMoniker Id="b54a5549-e19e-4a83-9b97-3cfd5b500fa0" LastKnownName="item : Item" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <interactionUse Id="c392822a-8efc-4cd2-8523-ab0329134cd1" name="Choose Item Property" referredToFile="ChooseItemProperty">
+            <referencesInternal>
+              <reference Id="bbb1c87c-2a62-4b00-9293-a4dfac41a83d" handle="backplane://Backplane/Microsoft.VisualStudio.TeamArchitect.SequenceDesigner.ToolAdapter.SequenceServiceManager/5dc7294c-db72-4d56-a02a-4c2dfc70b33c\ChooseItemProperty.sequencediagram" tag="Definition Reference">
+                <elementDefinition Id="fae6bcf1-4567-48c9-be49-3e8a44e829ac" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="ede88096-bea2-4e0f-bdf4-0f691bfa4132" />
+            <coveredLifelines>
+              <lifelineMoniker Id="b54a5549-e19e-4a83-9b97-3cfd5b500fa0" LastKnownName="item : Item" />
+              <lifelineMoniker Id="d2938616-c55a-42e9-b996-41e123731b96" LastKnownName="property : Property" />
+            </coveredLifelines>
+            <interactionUseOccurrenceSpecifications>
+              <interactionUseOccurrenceSpecificationMoniker Id="6c2223fe-9681-430c-9fc9-74285885de30" LastKnownName="InteractionUseOccurrenceSpecification17" />
+              <interactionUseOccurrenceSpecificationMoniker Id="728e3055-dde4-4dac-8ee8-c9408893634f" LastKnownName="InteractionUseOccurrenceSpecification18" />
+            </interactionUseOccurrenceSpecifications>
+          </interactionUse>
+          <interactionUseOccurrenceSpecification Id="6c2223fe-9681-430c-9fc9-74285885de30" name="InteractionUseOccurrenceSpecification17">
+            <elementDefinition Id="68898382-596e-4d82-a3ff-8b5c0b152d46" />
+            <covered>
+              <lifelineMoniker Id="b54a5549-e19e-4a83-9b97-3cfd5b500fa0" LastKnownName="item : Item" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification Id="728e3055-dde4-4dac-8ee8-c9408893634f" name="InteractionUseOccurrenceSpecification18">
+            <elementDefinition Id="49f72958-7808-4ece-af2e-c6c6a438747e" />
+            <covered>
+              <lifelineMoniker Id="d2938616-c55a-42e9-b996-41e123731b96" LastKnownName="property : Property" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="8d707517-2056-44a8-a307-eca319689fa2" name="OperandOccurrenceSpecification24">
+            <elementDefinition Id="0db6d7e0-176b-4726-8a4a-4baaf47393a5" />
+            <covered>
+              <lifelineMoniker Id="d2938616-c55a-42e9-b996-41e123731b96" LastKnownName="property : Property" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="1409a089-5311-4bfe-8622-7a89191163e1" name="OperandOccurrenceSpecification22">
+            <elementDefinition Id="292005e6-f639-41b2-8c98-98532c288b43" />
+            <covered>
+              <lifelineMoniker Id="b54a5549-e19e-4a83-9b97-3cfd5b500fa0" LastKnownName="item : Item" />
+            </covered>
+          </operandOccurrenceSpecification>
           <messageOccurrenceSpecification Id="bcfab21d-d2d4-4392-b7ed-cc696b902101" name="MessageOccurrenceSpecification11">
             <elementDefinition Id="a795439b-3df8-41a6-873f-2bc355e48b8b" />
             <covered>
@@ -212,6 +306,17 @@ ChooseItemType sd</body>
               <interactionUseOccurrenceSpecificationMoniker Id="a79f0da3-ba4f-4f1d-97ca-8437c807bc07" LastKnownName="InteractionUseOccurrenceSpecification14" />
             </topLevelOccurrences>
           </lifeline>
+          <lifeline Id="d2938616-c55a-42e9-b996-41e123731b96" name="property : Property" isActor="false" lifelineDisplayName="property : Property">
+            <elementDefinition Id="6666803d-ae63-4cc8-9cce-10d00af6dca4" />
+            <represents>
+              <propertyMoniker Id="d9ce7f41-879a-45d9-8e11-6bd512682e9f" />
+            </represents>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker Id="5c981ff7-c615-4f22-8de4-51ce090ceb3d" LastKnownName="OperandOccurrenceSpecification23" />
+              <interactionUseOccurrenceSpecificationMoniker Id="728e3055-dde4-4dac-8ee8-c9408893634f" LastKnownName="InteractionUseOccurrenceSpecification18" />
+              <operandOccurrenceSpecificationMoniker Id="8d707517-2056-44a8-a307-eca319689fa2" LastKnownName="OperandOccurrenceSpecification24" />
+            </topLevelOccurrences>
+          </lifeline>
         </lifelines>
         <messages>
           <message Id="d4bdffdf-7db7-4974-a8c4-a4c6fb3e1939" name="Add new item" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false" signatureText="+ addNewItem(category, type)">
@@ -283,6 +388,12 @@ ChooseItemType sd</body>
             <elementDefinition Id="d146496d-0d0c-49da-a3b5-6dfac06850a3" />
             <type_NamedElement>
               <referencedTypeMoniker Id="caf9b551-74e3-446c-88cc-417463a445c8" LastKnownName="Type" />
+            </type_NamedElement>
+          </property>
+          <property Id="d9ce7f41-879a-45d9-8e11-6bd512682e9f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0e79d388-6e09-4ea2-a442-2ef0220956c3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="94089dba-f0d6-4cb3-ad10-9f416bc9e5c8" LastKnownName="Property" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>

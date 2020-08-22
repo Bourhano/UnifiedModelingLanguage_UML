@@ -22,6 +22,13 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="AssociationProcedure.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AssociationProcedure.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AssociationProcedure.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="ChooseItemProperty.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -35,6 +42,20 @@
     <Content Include="ChooseType.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>ChooseType.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="EditOrder.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="EditOrder.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>EditOrder.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="ExecuteOrder.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ExecuteOrder.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ExecuteOrder.sequencediagram</DependentUpon>
     </Content>
     <Content Include="StockManagementSystem.usecasediagram">
       <SubType>Content</SubType>

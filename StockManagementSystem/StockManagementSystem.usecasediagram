@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="4ead3beb-6a36-4996-aabd-b2d732ca52a5" name="StockManagementSystem" linkedPackageId="ecf1380e-e4fa-4c54-b530-bd3d3222b5a7" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="4ead3beb-6a36-4996-aabd-b2d732ca52a5" name="StockManagementSystem" linkedPackageId="ecf1380e-e4fa-4c54-b530-bd3d3222b5a7" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <ownedCommentsInternal>
     <comment Id="352f1159-9169-4bfe-bfcc-3c8496bd587a">
       <elementDefinition Id="6cd4e761-e987-4dcb-9dfc-d73b2246d22b" />
@@ -24,9 +24,16 @@
     </comment>
     <comment Id="81848db9-5a2e-4fbe-a640-699f6e883e67">
       <elementDefinition Id="8c35cdef-c2ce-4be9-b601-6ff776cd4f44" />
-      <body>Create New Property depends on the existance of a prior Property Fromat. Hence the dependency relation exists.</body>
+      <body>A Property cannot be created prior to creating its Property Format, hence the dependancy.</body>
       <annotatedElements>
         <useCaseMoniker Id="b215d445-47e1-4c1f-a689-3b25c554ccd2" LastKnownName="Create New Property" />
+      </annotatedElements>
+    </comment>
+    <comment Id="11c3c9c1-be29-4945-9e4e-39aeca0d64c5">
+      <elementDefinition Id="67cfdbc0-7689-4f70-9042-184f85b4c84e" />
+      <body>Editing may include adding or exiting quantity, hence the inheritence</body>
+      <annotatedElements>
+        <useCaseMoniker Id="cc18fc32-e7c3-4b5f-80d5-bb1137059422" LastKnownName="Edit Item Quantity" />
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
