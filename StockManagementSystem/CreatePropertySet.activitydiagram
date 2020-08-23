@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="ff7b7988-8194-4322-8037-b916ede4f9d9" name="CreatePropertySet" linkedPackageId="fcd4899b-90b1-4a20-89f9-45d0ebe84fb3" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="f57a009a-3b39-4732-8645-ab2ef07e2935">
+      <profileInstance Id="ea69d81c-2a86-4f44-ace4-286fe20276cc" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="49c728f0-3aee-4e4f-8af2-6acd2ff7d58e">
+      <profileInstance Id="30e87148-bc5a-4c0d-aa4f-8cb61884c55e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="47204785-365b-437e-809f-9188dc3caa13">
+      <profileInstance Id="c542988d-b7f2-4933-af35-492802965d51" name="TextTemplateBindings">
+        <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
+      </profileInstance>
+      <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="30681055-eec8-4e4f-8cfa-430df3809e9e" name="CreatePropertySet" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="6994ea89-678e-4ae7-a817-3a5ac3aad1d9" />
+        <nodes>
+          <initialNode Id="353be51d-ff77-47b8-9a0f-eb3471983f17" name="Initial1" isLeaf="false">
+            <elementDefinition Id="5ed663c7-1a8f-48bb-910d-e3a32af6a5de" />
+          </initialNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="fcd4899b-90b1-4a20-89f9-45d0ebe84fb3" name="StockManagementSystem">
+    <elementDefinition Id="fc60c8e6-7ae5-4030-8055-34d885e91f60" />
+  </package>
+</activityRootModel>

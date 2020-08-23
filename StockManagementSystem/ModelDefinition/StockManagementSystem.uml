@@ -8902,27 +8902,110 @@ ChooseType sd</body>
           <initialNode
             Id="9a7386f6-9960-4537-95c3-425438aa1de0"
             name="Initial1"
-            isLeaf="false" />
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ed54f71f-5b23-457d-9dff-f662ca805eb3"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="effb75e0-2acf-4ceb-bb6d-c0679cc38f30"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
           <forkNode
             Id="effb75e0-2acf-4ceb-bb6d-c0679cc38f30"
             name="Fork1"
-            isLeaf="false" />
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="79614ec4-524f-48df-8a28-5e6cd91dc327"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="af9ba1ba-db23-4e42-9e84-1f052740f75b"
+                  LastKnownName="Fetch Machines"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="65b82e35-5876-40ef-a9ac-59b42a5f49ad"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4d536539-50a8-4084-ad23-6b5b1abd8cef"
+                  LastKnownName="Check Availability"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
           <opaqueAction
             Id="af9ba1ba-db23-4e42-9e84-1f052740f75b"
             name="Fetch Machines"
-            isLeaf="false" />
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c0133005-3d66-4227-82ca-cd8cda8e7a15"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="d5b6d1ec-d8f2-4361-8189-7b9a4d7a99b3"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
           <opaqueAction
             Id="4d536539-50a8-4084-ad23-6b5b1abd8cef"
             name="Check Availability"
-            isLeaf="false" />
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="24c61ed4-6145-4474-888b-8947506389c0"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="83a0cf76-dd5e-4e06-ba21-0364d718815b"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
           <decisionNode
             Id="83a0cf76-dd5e-4e06-ba21-0364d718815b"
             name="Decision1"
-            isLeaf="false" />
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ae56cc55-c0b0-4bcb-aa86-e0adb7a29847"
+                guard="no sufficient items"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="d5e42202-c768-4cad-a8b2-917ad2610765"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="deb58317-ceec-4007-b2fd-7cf9199fc25b"
+                guard="success"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="d5b6d1ec-d8f2-4361-8189-7b9a4d7a99b3"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
           <callBehaviorAction
             Id="3d849727-9b81-48f9-8151-dadfd11ced27"
-            name="Add Item"
+            name="Add New Item"
             isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="459325c3-e5fc-4d38-9db1-b54b880493d2"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="d5e42202-c768-4cad-a8b2-917ad2610765"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
             <behavior>
               <activityMoniker
                 Id="4c938299-0351-46b4-bc63-9f46733c5f09"
@@ -8930,6 +9013,43 @@ ChooseType sd</body>
                 LastKnownLocation="StockManagementSystem.uml" />
             </behavior>
           </callBehaviorAction>
+          <activityFinalNode
+            Id="d5e42202-c768-4cad-a8b2-917ad2610765"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <mergeNode
+            Id="d5b6d1ec-d8f2-4361-8189-7b9a4d7a99b3"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="63dc88bf-405d-4585-8c60-1ba4fe6fad49"
+                isLeaf="false">
+                <callBehaviorActionMoniker
+                  Id="3d849727-9b81-48f9-8151-dadfd11ced27"
+                  LastKnownName="Add New Item"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="6994ea89-678e-4ae7-a817-3a5ac3aad1d9"
+        name="CreatePropertySet"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="5ed663c7-1a8f-48bb-910d-e3a32af6a5de"
+            name="Initial1"
+            isLeaf="false" />
         </nodes>
       </activity>
     </packageHasNamedElement>

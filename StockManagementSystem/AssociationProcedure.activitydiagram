@@ -27,22 +27,78 @@
         <nodes>
           <initialNode Id="c896784d-ba0b-4fd6-a532-701af1cad288" name="Initial1" isLeaf="false">
             <elementDefinition Id="9a7386f6-9960-4537-95c3-425438aa1de0" />
+            <flowNodeTargets>
+              <controlFlow Id="eacff687-1581-48dc-95ec-1ee8b6b6ae43" isLeaf="false">
+                <forkNodeMoniker Id="9efed3bb-59c8-4d49-b883-37eef1635d1c" LastKnownName="Fork1" />
+                <elementDefinition Id="ed54f71f-5b23-457d-9dff-f662ca805eb3" />
+              </controlFlow>
+            </flowNodeTargets>
           </initialNode>
           <forkNode Id="9efed3bb-59c8-4d49-b883-37eef1635d1c" name="Fork1" isLeaf="false">
             <elementDefinition Id="effb75e0-2acf-4ceb-bb6d-c0679cc38f30" />
+            <flowNodeTargets>
+              <controlFlow Id="b5e5397a-17bc-49e2-a13b-421511be146e" isLeaf="false">
+                <opaqueActionMoniker Id="7dc2f4cd-b741-4fee-8c29-2c3d46e65b6d" LastKnownName="Fetch Machines" />
+                <elementDefinition Id="79614ec4-524f-48df-8a28-5e6cd91dc327" />
+              </controlFlow>
+              <controlFlow Id="539d7cd4-4117-4d75-a25e-c7a6add32a47" isLeaf="false">
+                <opaqueActionMoniker Id="212ca843-0ca0-4f90-9336-53d59ad15f07" LastKnownName="Check Availability" />
+                <elementDefinition Id="65b82e35-5876-40ef-a9ac-59b42a5f49ad" />
+              </controlFlow>
+            </flowNodeTargets>
           </forkNode>
           <opaqueAction Id="7dc2f4cd-b741-4fee-8c29-2c3d46e65b6d" name="Fetch Machines" isLeaf="false">
             <elementDefinition Id="af9ba1ba-db23-4e42-9e84-1f052740f75b" />
+            <flowNodeTargets>
+              <controlFlow Id="89976ccf-eb5d-4e1c-bd1c-a297158f202e" isLeaf="false">
+                <mergeNodeMoniker Id="69d5c758-6be4-4d5c-8a8f-e9817d61250c" LastKnownName="Merge1" />
+                <elementDefinition Id="c0133005-3d66-4227-82ca-cd8cda8e7a15" />
+              </controlFlow>
+            </flowNodeTargets>
           </opaqueAction>
           <opaqueAction Id="212ca843-0ca0-4f90-9336-53d59ad15f07" name="Check Availability" isLeaf="false">
             <elementDefinition Id="4d536539-50a8-4084-ad23-6b5b1abd8cef" />
+            <flowNodeTargets>
+              <controlFlow Id="6e9a946f-45e8-4f80-ae49-604546a0b9e8" isLeaf="false">
+                <decisionNodeMoniker Id="d29f6eca-e776-40bc-931c-2419e67af3ce" LastKnownName="Decision1" />
+                <elementDefinition Id="24c61ed4-6145-4474-888b-8947506389c0" />
+              </controlFlow>
+            </flowNodeTargets>
           </opaqueAction>
           <decisionNode Id="d29f6eca-e776-40bc-931c-2419e67af3ce" name="Decision1" isLeaf="false">
             <elementDefinition Id="83a0cf76-dd5e-4e06-ba21-0364d718815b" />
+            <flowNodeTargets>
+              <controlFlow Id="1f8e810d-ec64-4902-8bd7-0d33f8f20048" guard="no sufficient items" isLeaf="false">
+                <activityFinalNodeMoniker Id="c39b3554-447b-4972-8cc8-51d2b1cfcafe" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="ae56cc55-c0b0-4bcb-aa86-e0adb7a29847" />
+              </controlFlow>
+              <controlFlow Id="643d9ecc-562f-4f46-9b5e-afa1527c849c" guard="success" isLeaf="false">
+                <mergeNodeMoniker Id="69d5c758-6be4-4d5c-8a8f-e9817d61250c" LastKnownName="Merge1" />
+                <elementDefinition Id="deb58317-ceec-4007-b2fd-7cf9199fc25b" />
+              </controlFlow>
+            </flowNodeTargets>
           </decisionNode>
-          <callBehaviorAction Id="f4a3bd71-3478-4168-adee-f9ef73131e4b" name="Add Item" isLeaf="false">
+          <callBehaviorAction Id="f4a3bd71-3478-4168-adee-f9ef73131e4b" name="Add New Item" isLeaf="false">
             <elementDefinition Id="3d849727-9b81-48f9-8151-dadfd11ced27" />
+            <flowNodeTargets>
+              <controlFlow Id="f87b77f5-337a-474b-b47f-29199dcc4178" isLeaf="false">
+                <activityFinalNodeMoniker Id="c39b3554-447b-4972-8cc8-51d2b1cfcafe" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="459325c3-e5fc-4d38-9db1-b54b880493d2" />
+              </controlFlow>
+            </flowNodeTargets>
           </callBehaviorAction>
+          <activityFinalNode Id="c39b3554-447b-4972-8cc8-51d2b1cfcafe" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="d5e42202-c768-4cad-a8b2-917ad2610765" />
+          </activityFinalNode>
+          <mergeNode Id="69d5c758-6be4-4d5c-8a8f-e9817d61250c" name="Merge1" isLeaf="false">
+            <elementDefinition Id="d5b6d1ec-d8f2-4361-8189-7b9a4d7a99b3" />
+            <flowNodeTargets>
+              <controlFlow Id="77c2e48f-5635-4f6a-ac3f-9112b64e319e" isLeaf="false">
+                <callBehaviorActionMoniker Id="f4a3bd71-3478-4168-adee-f9ef73131e4b" LastKnownName="Add New Item" />
+                <elementDefinition Id="63dc88bf-405d-4585-8c60-1ba4fe6fad49" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>

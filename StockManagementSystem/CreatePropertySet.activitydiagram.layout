@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CreatePropertySet">
+  <activityRootModelMoniker Id="ff7b7988-8194-4322-8037-b916ede4f9d9" />
+  <nestedChildShapes>
+    <initialNodeShape Id="dd2f3dbc-b0f0-45f1-be40-4fc46487fa47" absoluteBounds="1, 0.625, 0.125, 0.125" customColor="89, 89, 89">
+      <initialNodeMoniker Id="353be51d-ff77-47b8-9a0f-eb3471983f17" LastKnownName="Initial1" />
+    </initialNodeShape>
+  </nestedChildShapes>
+</activityDiagram>

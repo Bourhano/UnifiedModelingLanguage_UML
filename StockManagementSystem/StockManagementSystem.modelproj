@@ -64,6 +64,20 @@
       <SubType>Content</SubType>
       <DependentUpon>ChooseType.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="CreatePropertySet.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CreatePropertySet.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CreatePropertySet.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="EditItemQuantity.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="EditItemQuantity.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>EditItemQuantity.activitydiagram</DependentUpon>
+    </Content>
     <Content Include="EditItemQuantity.sequencediagram">
       <SubType>Content</SubType>
     </Content>

@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="95389da8-36eb-434e-8ee6-6433803d2dab" name="ChooseType" linkedPackageId="d77b162e-fbec-41d9-ad43-d231c4a9ec34" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="96de3974-4e27-44cc-addf-88458eeb7075">
-      <profileInstance Id="e1421883-5c95-49b9-b11d-777153870978" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="eefa0f15-2e64-47c7-9514-35910e9a595a">
-      <profileInstance Id="c8353c88-d4cc-4ba9-8708-83e36a16bed9" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="58acaf86-e66f-4ac8-ab93-8b3fe6168aea">
-      <profileInstance Id="901d949a-5320-4b46-8b3a-b422e1b912a5" name="TextTemplateBindings">
-        <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
-      </profileInstance>
-      <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="dab4b021-bccc-4c7e-a090-69b167f2f2fe" name="ChooseType" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -164,5 +144,25 @@
   </packagedElements>
   <package Id="d77b162e-fbec-41d9-ad43-d231c4a9ec34" name="StockManagementSystem">
     <elementDefinition Id="fc60c8e6-7ae5-4030-8055-34d885e91f60" />
+    <profileInstances>
+      <packageHasProfileInstances Id="96de3974-4e27-44cc-addf-88458eeb7075">
+        <profileInstance Id="e1421883-5c95-49b9-b11d-777153870978" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="eefa0f15-2e64-47c7-9514-35910e9a595a">
+        <profileInstance Id="c8353c88-d4cc-4ba9-8708-83e36a16bed9" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="58acaf86-e66f-4ac8-ab93-8b3fe6168aea">
+        <profileInstance Id="901d949a-5320-4b46-8b3a-b422e1b912a5" name="TextTemplateBindings">
+          <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
+        </profileInstance>
+        <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>
