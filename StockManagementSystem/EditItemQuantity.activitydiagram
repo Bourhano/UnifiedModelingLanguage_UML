@@ -1,1 +1,112 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="d0a5008a-d608-4225-8db3-0e2b993b61c6" name="EditItemQuantity" linkedPackageId="555e24bc-4d4f-4173-bbb3-165fe24300f8" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b23016b8-7ee8-40ad-bd32-4320bd3cbb5c">
+      <profileInstance Id="579a8085-e54f-49a5-9579-af0ce14f7bd6" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a4584599-3788-4147-8b91-0cde9e456f97">
+      <profileInstance Id="3cb4cb79-5793-45fe-82fd-12a8abfec96a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="69727706-d7ab-474a-91ce-fd8ba60d02aa">
+      <profileInstance Id="232a0043-3f3b-48ce-9b80-6436304445bf" name="TextTemplateBindings">
+        <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
+      </profileInstance>
+      <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="4f72c15b-6980-4483-beb1-0b07bce0d5d8" name="EditItemQuantity" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="68529252-7b0d-4441-b9ea-64ba79842d01" />
+        <nodes>
+          <initialNode Id="3aa98c95-2564-4aef-be0e-e704ce7d9b16" name="Initial1" isLeaf="false">
+            <elementDefinition Id="34732469-79fa-4973-ae6c-170064b69ddc" />
+            <flowNodeTargets>
+              <controlFlow Id="37042256-33d0-4977-8175-03d65e29db68" isLeaf="false">
+                <decisionNodeMoniker Id="b32f6776-c04c-4bbc-bf16-16c775d3aff9" LastKnownName="Decision1" />
+                <elementDefinition Id="58501e34-abd6-4980-9452-e305bd083c11" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <decisionNode Id="b32f6776-c04c-4bbc-bf16-16c775d3aff9" name="Decision1" isLeaf="false">
+            <elementDefinition Id="62d59936-8cf8-490b-9228-ecf20b8907f1" />
+            <flowNodeTargets>
+              <controlFlow Id="6f34dfc1-9f15-46db-b43f-6cd963dc4439" guard="add items" isLeaf="false">
+                <callOperationActionMoniker Id="1d8b75c3-4fa4-40bb-a3a5-65b88a77bac5" LastKnownName="Add Item" />
+                <elementDefinition Id="7ec9cdfd-4393-4603-a8ca-a113b31a8637" />
+              </controlFlow>
+              <controlFlow Id="a494968f-96a7-4ebd-b515-7ccdee1f2ec8" guard="exit item" isLeaf="false">
+                <callOperationActionMoniker Id="6315b557-dbb3-478e-8522-e5a880586056" LastKnownName="Exit Item" />
+                <elementDefinition Id="df2b7681-5634-4e86-ab80-4ab7e7cee5fd" />
+              </controlFlow>
+              <controlFlow Id="9af65f33-02be-4760-a454-e33bc9c6cb3a" guard="abort" isLeaf="false">
+                <activityFinalNodeMoniker Id="fe44d236-18e4-44b8-a39e-65a86f2a5e55" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="b7b51286-5dff-4642-8b9a-476df2d2f6a2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode Id="90f9fdaf-7153-4d23-afff-1f9ac6cd1078" name="Merge1" isLeaf="false">
+            <elementDefinition Id="eb72ba86-1865-4d29-87bc-256d9e2995e0" />
+            <flowNodeTargets>
+              <controlFlow Id="89d3c16a-9026-4bc8-acc4-27e49fad8ed3" isLeaf="false">
+                <sendSignalActionMoniker Id="0f2dfeb4-a8a0-4e08-98c9-3eac0ed49b81" LastKnownName="Successful edit" />
+                <elementDefinition Id="6bf761ba-bfd8-4b84-9f82-a21f9edeb87d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <callOperationAction Id="6315b557-dbb3-478e-8522-e5a880586056" name="Exit Item" isLeaf="false">
+            <elementDefinition Id="b7c72ec3-4242-495a-80a2-2d6d2acfaa2b" />
+            <flowNodeTargets>
+              <controlFlow Id="657d3b38-3f65-43eb-8716-d185fbe48310" isLeaf="false">
+                <mergeNodeMoniker Id="90f9fdaf-7153-4d23-afff-1f9ac6cd1078" LastKnownName="Merge1" />
+                <elementDefinition Id="091ab439-6ea2-4f8a-8f72-a2176d811ca1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="1d8b75c3-4fa4-40bb-a3a5-65b88a77bac5" name="Add Item" isLeaf="false">
+            <elementDefinition Id="6ea7435c-5552-4bef-bb79-cffbe944c35f" />
+            <flowNodeTargets>
+              <controlFlow Id="fb2d3dcc-326e-4549-b816-ff41751ec42a" isLeaf="false">
+                <mergeNodeMoniker Id="90f9fdaf-7153-4d23-afff-1f9ac6cd1078" LastKnownName="Merge1" />
+                <elementDefinition Id="73b55115-7c99-4417-83c3-448938d71541" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <activityFinalNode Id="fe44d236-18e4-44b8-a39e-65a86f2a5e55" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="a3f07dd2-8ef2-4a2e-adb8-96c0b5b9c0ce" />
+          </activityFinalNode>
+          <sendSignalAction Id="0f2dfeb4-a8a0-4e08-98c9-3eac0ed49b81" name="Successful edit" isLeaf="false">
+            <elementDefinition Id="91859d06-a8aa-4648-be7c-e5afd203828e" />
+            <pins>
+              <actionHasOutputsInternal>
+                <outputPin Id="7ca7fcd3-a625-4de9-af4f-028d77b2b721" name="success" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="760594ee-00de-439b-9d6e-fa1263d6aa43" />
+                  <objectFlowTargets>
+                    <objectFlow Id="2f007eb9-e801-4a7e-b9c7-501b3e2fe02c" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <activityFinalNodeMoniker Id="fe44d236-18e4-44b8-a39e-65a86f2a5e55" LastKnownName="ActivityFinal1" />
+                      <elementDefinition Id="84478814-ac27-4f26-b6d8-27631a3a41a4" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="34c71fec-df5a-4895-bfb4-1cade1804547" name="2147483647" value="2147483647">
+                      <elementDefinition Id="4a9a1919-3fd4-4158-8e71-e0b7594d5e23" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </actionHasOutputsInternal>
+            </pins>
+          </sendSignalAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="555e24bc-4d4f-4173-bbb3-165fe24300f8" name="StockManagementSystem">
+    <elementDefinition Id="fc60c8e6-7ae5-4030-8055-34d885e91f60" />
+  </package>
+</activityRootModel>

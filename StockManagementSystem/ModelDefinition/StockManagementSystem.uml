@@ -9272,6 +9272,165 @@ ChooseType sd</body>
         </nodes>
       </activity>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="68529252-7b0d-4441-b9ea-64ba79842d01"
+        name="EditItemQuantity"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="34732469-79fa-4973-ae6c-170064b69ddc"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="58501e34-abd6-4980-9452-e305bd083c11"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="62d59936-8cf8-490b-9228-ecf20b8907f1"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <decisionNode
+            Id="62d59936-8cf8-490b-9228-ecf20b8907f1"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7ec9cdfd-4393-4603-a8ca-a113b31a8637"
+                guard="add items"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="6ea7435c-5552-4bef-bb79-cffbe944c35f"
+                  LastKnownName="Add Item"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="df2b7681-5634-4e86-ab80-4ab7e7cee5fd"
+                guard="exit item"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="b7c72ec3-4242-495a-80a2-2d6d2acfaa2b"
+                  LastKnownName="Exit Item"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="b7b51286-5dff-4642-8b9a-476df2d2f6a2"
+                guard="abort"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="a3f07dd2-8ef2-4a2e-adb8-96c0b5b9c0ce"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode
+            Id="eb72ba86-1865-4d29-87bc-256d9e2995e0"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6bf761ba-bfd8-4b84-9f82-a21f9edeb87d"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="91859d06-a8aa-4648-be7c-e5afd203828e"
+                  LastKnownName="Successful edit"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <callOperationAction
+            Id="b7c72ec3-4242-495a-80a2-2d6d2acfaa2b"
+            name="Exit Item"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="091ab439-6ea2-4f8a-8f72-a2176d811ca1"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="eb72ba86-1865-4d29-87bc-256d9e2995e0"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <operation>
+              <operationMoniker
+                Id="d40f5b43-fa4e-47a8-b42e-da3719078138"
+                LastKnownName="exitQuantity"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </operation>
+          </callOperationAction>
+          <callOperationAction
+            Id="6ea7435c-5552-4bef-bb79-cffbe944c35f"
+            name="Add Item"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="73b55115-7c99-4417-83c3-448938d71541"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="eb72ba86-1865-4d29-87bc-256d9e2995e0"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="StockManagementSystem.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <operation>
+              <operationMoniker
+                Id="95c23da1-657a-464b-8f46-736f68c09bcd"
+                LastKnownName="addQuantity"
+                LastKnownLocation="StockManagementSystem.uml" />
+            </operation>
+          </callOperationAction>
+          <activityFinalNode
+            Id="a3f07dd2-8ef2-4a2e-adb8-96c0b5b9c0ce"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <sendSignalAction
+            Id="91859d06-a8aa-4648-be7c-e5afd203828e"
+            name="Successful edit"
+            isLeaf="false">
+            <pins>
+              <actionHasOutputsInternal>
+                <outputPin
+                  Id="760594ee-00de-439b-9d6e-fa1263d6aa43"
+                  name="success"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <objectFlowTargets>
+                    <objectFlow
+                      Id="84478814-ac27-4f26-b6d8-27631a3a41a4"
+                      isLeaf="false"
+                      isMulticast="false"
+                      isMultireceive="false">
+                      <activityFinalNodeMoniker
+                        Id="a3f07dd2-8ef2-4a2e-adb8-96c0b5b9c0ce"
+                        LastKnownName="ActivityFinal1"
+                        LastKnownLocation="StockManagementSystem.uml" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger
+                      Id="4a9a1919-3fd4-4158-8e71-e0b7594d5e23"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </actionHasOutputsInternal>
+            </pins>
+          </sendSignalAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
