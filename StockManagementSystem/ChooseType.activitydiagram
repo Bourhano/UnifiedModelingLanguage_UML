@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="95389da8-36eb-434e-8ee6-6433803d2dab" name="ChooseType" linkedPackageId="d77b162e-fbec-41d9-ad43-d231c4a9ec34" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="96de3974-4e27-44cc-addf-88458eeb7075">
+      <profileInstance Id="e1421883-5c95-49b9-b11d-777153870978" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="eefa0f15-2e64-47c7-9514-35910e9a595a">
+      <profileInstance Id="c8353c88-d4cc-4ba9-8708-83e36a16bed9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="58acaf86-e66f-4ac8-ab93-8b3fe6168aea">
+      <profileInstance Id="901d949a-5320-4b46-8b3a-b422e1b912a5" name="TextTemplateBindings">
+        <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
+      </profileInstance>
+      <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="dab4b021-bccc-4c7e-a090-69b167f2f2fe" name="ChooseType" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="963f4f45-7ff6-4963-a5b4-56bb72029d6e" />
+        <nodes>
+          <initialNode Id="7fa1df96-2e27-41bb-8ad2-8ed1aa0a0995" name="Initial1" isLeaf="false">
+            <elementDefinition Id="7e3f312d-ae20-4f1f-bf1e-d832dd22c1be" />
+            <objectFlowTargets>
+              <objectFlow Id="09522762-2a23-4db0-8cde-5ebd2f7e2367" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="92a026af-5ea1-442d-bd5d-b4118201c13d" LastKnownName="Item" />
+                <elementDefinition Id="bc1f681e-2241-46bf-b90b-1564913aecad" />
+              </objectFlow>
+            </objectFlowTargets>
+          </initialNode>
+          <decisionNode Id="c4cac7ad-c00f-4f58-93fd-ff80c1b696fe" name="Decision1" isLeaf="false">
+            <elementDefinition Id="59abb8cc-e480-460d-8f88-d9a5e24dfdae" />
+            <flowNodeTargets>
+              <controlFlow Id="a6c5d40f-9cf3-42a5-b1c1-bf5de8bcd355" guard="Add new tupe" isLeaf="false">
+                <callOperationActionMoniker Id="9442a0bf-dd81-42be-9978-fbb4daca5962" LastKnownName="Create New Type" />
+                <elementDefinition Id="6cd55a6e-5498-4307-869b-8563b444766f" />
+              </controlFlow>
+              <controlFlow Id="9dee6f93-79b5-4391-9af7-e32ba6841e1f" guard="Type Exists" isLeaf="false">
+                <opaqueActionMoniker Id="5c8c56c2-220c-47f3-ba0e-59e93c1d17de" LastKnownName="Set Type" />
+                <elementDefinition Id="04613f86-2c32-41af-8821-3b79147bafbb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <objectNode Id="92a026af-5ea1-442d-bd5d-b4118201c13d" name="Item" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="aabd0594-1e62-42a2-a646-25cb81a9c85a" />
+            <objectFlowTargets>
+              <objectFlow Id="caad962b-5deb-43bd-a1af-f0a1c23f7957" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <decisionNodeMoniker Id="c4cac7ad-c00f-4f58-93fd-ff80c1b696fe" LastKnownName="Decision1" />
+                <elementDefinition Id="92b13b94-b0e4-4302-ad12-2cafd25a3758" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="73e38f6b-872a-4e89-b272-ad6d51a3cb96" name="2147483647" value="2147483647">
+                <elementDefinition Id="eea69c76-9c04-4d0e-b0d6-e68216192f23" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <callOperationAction Id="9442a0bf-dd81-42be-9978-fbb4daca5962" name="Create New Type" isLeaf="false">
+            <elementDefinition Id="a7e3db76-c265-4e05-b320-a0a8d96de82b" />
+            <flowNodeTargets>
+              <controlFlow Id="290540ae-d203-4d3c-aa26-a591ac8a478d" isLeaf="false">
+                <mergeNodeMoniker Id="f5a320f3-f98a-44c5-bb05-999214a5d094" LastKnownName="Merge1" />
+                <elementDefinition Id="52251eef-ae92-424a-acba-45adc6e7ddb9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <opaqueAction Id="5c8c56c2-220c-47f3-ba0e-59e93c1d17de" name="Set Type" isLeaf="false">
+            <elementDefinition Id="68f24e78-a2e6-4070-8bb7-f7f3cd159446" />
+            <flowNodeTargets>
+              <controlFlow Id="aa1ee777-a5e4-45aa-9583-6ac672f4ad6f" isLeaf="false">
+                <mergeNodeMoniker Id="f5a320f3-f98a-44c5-bb05-999214a5d094" LastKnownName="Merge1" />
+                <elementDefinition Id="d4397794-77eb-422c-b1ca-7652a08d6119" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode Id="f5a320f3-f98a-44c5-bb05-999214a5d094" name="Merge1" isLeaf="false">
+            <elementDefinition Id="7bebb6eb-19d9-4661-a25d-953719274b6e" />
+            <objectFlowTargets>
+              <objectFlow Id="18ced008-63be-46ea-b6a0-6a088398316e" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="03e0a906-2b0b-45b8-9f76-43177ba06df8" LastKnownName="Item with Defined Type" />
+                <elementDefinition Id="0433fa3e-f3b6-426c-9a87-b2ec951fc2be" />
+              </objectFlow>
+            </objectFlowTargets>
+          </mergeNode>
+          <decisionNode Id="ef7e31c7-7f8b-4bf7-8280-48974d7b6abf" name="Add New Property?" isLeaf="false">
+            <elementDefinition Id="301b0bfd-03b8-4aa7-8f75-9c035876afdc" />
+            <flowNodeTargets>
+              <controlFlow Id="a1920f69-9b80-4243-835a-25a86979d2ca" guard="User skips property add" isLeaf="false">
+                <activityFinalNodeMoniker Id="49181a46-81ad-412c-87d1-2bb13c044a22" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="68b05c63-fa90-48ee-9e89-e9644bf30fcf" />
+              </controlFlow>
+              <controlFlow Id="a01766a4-3138-4794-a7f7-b795548f7438" isLeaf="false">
+                <decisionNodeMoniker Id="5abd2276-081b-47a1-bb83-e68ab7a2da54" LastKnownName="Decision2" />
+                <elementDefinition Id="d577e4f4-aa0b-4308-9be0-85762a2fbfb0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <objectNode Id="03e0a906-2b0b-45b8-9f76-43177ba06df8" name="Item with Defined Type" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="4b6521b2-c3b6-40c0-978b-5ac3fb4372ef" />
+            <objectFlowTargets>
+              <objectFlow Id="448f46f7-66dc-47ee-94d0-e911778c2f5c" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <decisionNodeMoniker Id="ef7e31c7-7f8b-4bf7-8280-48974d7b6abf" LastKnownName="Add New Property?" />
+                <elementDefinition Id="a0dff176-9319-4461-b2f7-8d33cb0bcbd9" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="b060ead9-a5f3-4b32-b7c6-c7f00a8af79f" name="2147483647" value="2147483647">
+                <elementDefinition Id="728f9c81-2d40-4f1b-84b0-68c96ad3a109" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <callOperationAction Id="f5e1348e-7e45-4588-bf33-b4a1b7c7c481" name="Add Property" isLeaf="false">
+            <elementDefinition Id="13f31961-a94f-4acb-a313-2847a7098060" />
+            <flowNodeTargets>
+              <controlFlow Id="b84b3a6b-3f79-4d2c-88a1-4631d34b47a4" isLeaf="false">
+                <mergeNodeMoniker Id="495538d3-b87c-4fda-903c-27a580c1c56d" LastKnownName="Merge2" />
+                <elementDefinition Id="ab1dd4db-c2a3-4ef3-97fb-a8a6f561f469" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <activityFinalNode Id="49181a46-81ad-412c-87d1-2bb13c044a22" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="f64fe24c-131d-404e-aab0-5197ee1076b5" />
+          </activityFinalNode>
+          <decisionNode Id="5abd2276-081b-47a1-bb83-e68ab7a2da54" name="Decision2" isLeaf="false">
+            <elementDefinition Id="ed679a54-a299-43fe-8dff-a07aee2717cd" />
+            <flowNodeTargets>
+              <controlFlow Id="be0e5676-d05d-4e6a-bdd1-ed35f0e610b3" guard="Property does not exist" isLeaf="false">
+                <callOperationActionMoniker Id="f5e1348e-7e45-4588-bf33-b4a1b7c7c481" LastKnownName="Add Property" />
+                <elementDefinition Id="a1ef6a5e-c069-421c-98f7-80e73476e1c1" />
+              </controlFlow>
+              <controlFlow Id="d0b5cd73-7a26-4fd4-88d5-3bea71d3c3eb" isLeaf="false">
+                <callOperationActionMoniker Id="508d7a97-ae55-43f3-8568-b56f1a2b1614" LastKnownName="Pick Existing Property" />
+                <elementDefinition Id="82047a75-2492-402b-ade4-f7dcf10efa6c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode Id="495538d3-b87c-4fda-903c-27a580c1c56d" name="Merge2" isLeaf="false">
+            <elementDefinition Id="a4a6a7a8-7c57-48ca-b289-b998fb49faf9" />
+            <flowNodeTargets>
+              <controlFlow Id="b6ed323e-ad2c-4d8d-8617-c9e29c5492ab" isLeaf="false">
+                <activityFinalNodeMoniker Id="49181a46-81ad-412c-87d1-2bb13c044a22" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="d6512b63-e036-4592-a62f-d3a425c6b6fa" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <callOperationAction Id="508d7a97-ae55-43f3-8568-b56f1a2b1614" name="Pick Existing Property" isLeaf="false">
+            <elementDefinition Id="8a312ab6-a495-4f45-8618-949350031725" />
+            <flowNodeTargets>
+              <controlFlow Id="ba3b18bc-f190-4e5b-b9b9-31ba758e03af" isLeaf="false">
+                <mergeNodeMoniker Id="495538d3-b87c-4fda-903c-27a580c1c56d" LastKnownName="Merge2" />
+                <elementDefinition Id="95be0d0b-40ec-4f4a-aa11-fb1e44c1e218" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="d77b162e-fbec-41d9-ad43-d231c4a9ec34" name="StockManagementSystem">
+    <elementDefinition Id="fc60c8e6-7ae5-4030-8055-34d885e91f60" />
+  </package>
+</activityRootModel>

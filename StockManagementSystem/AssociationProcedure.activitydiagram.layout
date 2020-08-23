@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AssociationProcedure">
+  <activityRootModelMoniker Id="a4f6f570-e022-464e-bc8e-9c7984114acd" />
+  <nestedChildShapes>
+    <initialNodeShape Id="0c6eda41-6bc6-4da8-a688-a861ff4fd733" absoluteBounds="3.875, 0.5, 0.125, 0.125" customColor="89, 89, 89">
+      <initialNodeMoniker Id="c896784d-ba0b-4fd6-a532-701af1cad288" LastKnownName="Initial1" />
+    </initialNodeShape>
+    <forkNodeShape Id="fe0303c9-56e7-4f78-88f3-38db5c8064f9" absoluteBounds="3.25, 1.25, 1.375, 0.125" customColor="32, 32, 32">
+      <forkNodeMoniker Id="9efed3bb-59c8-4d49-b883-37eef1635d1c" LastKnownName="Fork1" />
+      <relativeChildShapes />
+    </forkNodeShape>
+    <actionShape Id="9be17c8a-7610-4121-a1ad-8bbcb6fd877e" absoluteBounds="2.75, 2.125, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="7dc2f4cd-b741-4fee-8c29-2c3d46e65b6d" LastKnownName="Fetch Machines" />
+    </actionShape>
+    <actionShape Id="67f8efa8-adb8-49d0-ad3b-ccd391710bf4" absoluteBounds="5.625, 2.125, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="212ca843-0ca0-4f90-9336-53d59ad15f07" LastKnownName="Check Availability" />
+    </actionShape>
+    <lineShape Id="1d585f1e-9dc5-4394-8df1-5377dc59476b" absoluteBounds="5.125, 0.5, 0.03125, 4.5" outlineColor="83, 134, 191" outlineThickness="0.03125" />
+    <decisionNodeShape Id="5dfd414d-2c13-480d-a725-7d72103b017a" absoluteBounds="4, 3.25, 0.375, 0.375" customColor="185, 212, 238">
+      <decisionNodeMoniker Id="d29f6eca-e776-40bc-931c-2419e67af3ce" LastKnownName="Decision1" />
+      <relativeChildShapes />
+    </decisionNodeShape>
+    <callBehaviorActionShape Id="03dba069-8e7b-4b02-a840-a5f5d5e08629" absoluteBounds="2.875, 4.125, 1.125, 0.5" customColor="161, 199, 231">
+      <callBehaviorActionMoniker Id="f4a3bd71-3478-4168-adee-f9ef73131e4b" LastKnownName="Add Item" />
+    </callBehaviorActionShape>
+  </nestedChildShapes>
+</activityDiagram>

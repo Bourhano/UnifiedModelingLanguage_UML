@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="a4f6f570-e022-464e-bc8e-9c7984114acd" name="AssociationProcedure" linkedPackageId="f210e927-13ef-4f3b-ad31-19b768f89f5a" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b7802cd7-31ff-4662-89cf-bd375f2417c6">
+      <profileInstance Id="f4da215d-d750-488c-906b-ea5f6054e08a" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="90f0634e-9960-4258-80af-b2125f88778c">
+      <profileInstance Id="929c8f64-f5b2-4acf-abdf-c238333d2e02" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a5df1de4-ca5c-4153-9b6d-b25f105abac8">
+      <profileInstance Id="62c0bcc1-b8d0-4b83-8bb0-7580cf48eb8a" name="TextTemplateBindings">
+        <elementDefinition Id="a7894ac9-2499-4316-8111-f767aab6d77c" />
+      </profileInstance>
+      <elementDefinition Id="b9f9459f-b719-4485-a0a2-c081bcbad78b" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="3e34ce8c-a37e-44d1-8d62-d984b9a9bc69" name="AssociationProcedure" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="6e6e9309-9a41-4b20-905d-06fd4bc42ce6" />
+        <nodes>
+          <initialNode Id="c896784d-ba0b-4fd6-a532-701af1cad288" name="Initial1" isLeaf="false">
+            <elementDefinition Id="9a7386f6-9960-4537-95c3-425438aa1de0" />
+          </initialNode>
+          <forkNode Id="9efed3bb-59c8-4d49-b883-37eef1635d1c" name="Fork1" isLeaf="false">
+            <elementDefinition Id="effb75e0-2acf-4ceb-bb6d-c0679cc38f30" />
+          </forkNode>
+          <opaqueAction Id="7dc2f4cd-b741-4fee-8c29-2c3d46e65b6d" name="Fetch Machines" isLeaf="false">
+            <elementDefinition Id="af9ba1ba-db23-4e42-9e84-1f052740f75b" />
+          </opaqueAction>
+          <opaqueAction Id="212ca843-0ca0-4f90-9336-53d59ad15f07" name="Check Availability" isLeaf="false">
+            <elementDefinition Id="4d536539-50a8-4084-ad23-6b5b1abd8cef" />
+          </opaqueAction>
+          <decisionNode Id="d29f6eca-e776-40bc-931c-2419e67af3ce" name="Decision1" isLeaf="false">
+            <elementDefinition Id="83a0cf76-dd5e-4e06-ba21-0364d718815b" />
+          </decisionNode>
+          <callBehaviorAction Id="f4a3bd71-3478-4168-adee-f9ef73131e4b" name="Add Item" isLeaf="false">
+            <elementDefinition Id="3d849727-9b81-48f9-8151-dadfd11ced27" />
+          </callBehaviorAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="f210e927-13ef-4f3b-ad31-19b768f89f5a" name="StockManagementSystem">
+    <elementDefinition Id="fc60c8e6-7ae5-4030-8055-34d885e91f60" />
+  </package>
+</activityRootModel>

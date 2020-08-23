@@ -22,6 +22,20 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="AddNewItem.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AddNewItem.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AddNewItem.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="AssociationProcedure.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AssociationProcedure.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AssociationProcedure.activitydiagram</DependentUpon>
+    </Content>
     <Content Include="AssociationProcedure.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -36,12 +50,26 @@
       <SubType>Content</SubType>
       <DependentUpon>ChooseItemProperty.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="ChooseType.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ChooseType.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ChooseType.activitydiagram</DependentUpon>
+    </Content>
     <Content Include="ChooseType.sequencediagram">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ChooseType.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>ChooseType.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="EditItemQuantity.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="EditItemQuantity.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>EditItemQuantity.sequencediagram</DependentUpon>
     </Content>
     <Content Include="EditOrder.sequencediagram">
       <SubType>Content</SubType>
