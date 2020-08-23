@@ -27,7 +27,133 @@
         <nodes>
           <initialNode Id="353be51d-ff77-47b8-9a0f-eb3471983f17" name="Initial1" isLeaf="false">
             <elementDefinition Id="5ed663c7-1a8f-48bb-910d-e3a32af6a5de" />
+            <flowNodeTargets>
+              <controlFlow Id="dc5309e7-ffc3-42d3-8d1b-687fc5703e3c" isLeaf="false">
+                <sendSignalActionMoniker Id="fb7d0aec-a118-4165-b297-d8b694d22cc8" LastKnownName="User Selects Property Names" />
+                <elementDefinition Id="1359e0a4-2e22-4963-9c80-5c67ad560c2e" />
+              </controlFlow>
+              <controlFlow Id="ec18c63f-f326-4936-a13f-9fa38eaad309" isLeaf="false">
+                <sendSignalActionMoniker Id="1d3b2a95-8840-46dd-83c9-0c37e4b412bb" LastKnownName="User Selects Property Values" />
+                <elementDefinition Id="3f05a30c-10f8-4ff6-87d7-42d940f90bcb" />
+              </controlFlow>
+            </flowNodeTargets>
           </initialNode>
+          <sendSignalAction Id="fb7d0aec-a118-4165-b297-d8b694d22cc8" name="User Selects Property Names" isLeaf="false">
+            <elementDefinition Id="afa5bb90-f508-4bf4-aee0-4abf82a5cd27" />
+            <flowNodeTargets>
+              <controlFlow Id="ea6eb21c-2f19-4ad6-90f4-dce1d43f8676" isLeaf="false">
+                <mergeNodeMoniker Id="b83143e6-9eef-4461-a1b0-d880220a762c" LastKnownName="Merge1" />
+                <elementDefinition Id="5f0c5906-efc1-4a60-b7b6-0a58f92a8e33" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <sendSignalAction Id="1d3b2a95-8840-46dd-83c9-0c37e4b412bb" name="User Selects Property Values" isLeaf="false">
+            <elementDefinition Id="d6370716-ea62-45f4-b638-78460533caa2" />
+            <flowNodeTargets>
+              <controlFlow Id="2ccc839d-16db-4c11-b030-29a8474961cc" isLeaf="false">
+                <mergeNodeMoniker Id="b83143e6-9eef-4461-a1b0-d880220a762c" LastKnownName="Merge1" />
+                <elementDefinition Id="e137071a-4243-4a80-bef4-bcdb6dd47852" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <mergeNode Id="b83143e6-9eef-4461-a1b0-d880220a762c" name="Merge1" isLeaf="false">
+            <elementDefinition Id="a7d6810b-6a78-4181-b2ef-7dbbcb2e0145" />
+            <flowNodeTargets>
+              <controlFlow Id="cfc1ff7d-8798-45fe-939f-37eaa0dace06" isLeaf="false">
+                <sendSignalActionMoniker Id="c89baa1d-f3df-4a5a-aeb0-88c04af26068" LastKnownName="Confirm Data" />
+                <elementDefinition Id="ee90ed12-5c15-49be-82a5-555575b22334" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <sendSignalAction Id="c89baa1d-f3df-4a5a-aeb0-88c04af26068" name="Confirm Data" isLeaf="false">
+            <elementDefinition Id="cae8269d-093d-497a-83d6-76958ce06c5a" />
+          </sendSignalAction>
+          <acceptEventAction Id="8ed576e2-9802-4f28-ae8f-9033ae0ffaf8" name="Receive Data on System" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="8164ba6f-69e4-4bcc-9e1a-137f5bc9e231" />
+            <objectFlowTargets>
+              <objectFlow Id="21698a6c-318d-4cbb-a072-f898df91c8d2" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="6da542b6-699b-4b58-b22e-dea430feafea" LastKnownName="List of Properties" />
+                <elementDefinition Id="511e6ae5-fe9c-4c21-85c1-da94d6bc0f09" />
+              </objectFlow>
+            </objectFlowTargets>
+          </acceptEventAction>
+          <callOperationAction Id="fdd8a0a0-fc4b-4099-8266-2b01e842e78d" name="Create the Set" isLeaf="false">
+            <elementDefinition Id="d9b6f077-8301-4161-95d7-fe04a4a3a9bb" />
+            <pins>
+              <callOperationActionHasTarget>
+                <inputPin Id="6da542b6-699b-4b58-b22e-dea430feafea" name="List of Properties" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="f1e71f0a-a7e5-4182-ab89-f13660b5d3e5" />
+                  <upperBound>
+                    <literalInteger Id="af6f14d8-ad4a-4ca4-a24b-d759087f179a" name="2147483647" value="2147483647">
+                      <elementDefinition Id="cbb2bf66-07dd-4f7d-9a12-c3418de131e4" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </callOperationActionHasTarget>
+              <callActionHasResults>
+                <outputPin Id="2b4c1e4a-f11c-44ec-b2e7-e3bd9b07fefd" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="7240f8ef-1cf6-41e7-a781-40de6be8aa57" />
+                  <upperBound>
+                    <literalInteger Id="a5c97b37-b402-48d0-9cf1-d8bdbad4214c" name="2147483647" value="2147483647">
+                      <elementDefinition Id="ae127c15-14f9-4015-84af-f9b3dc29f223" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </callActionHasResults>
+              <callActionHasResults>
+                <outputPin Id="1d9a5ab2-f31d-47bd-b63e-ed925929e688" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="633a7a9a-9998-4ee5-826c-354b5fdc5502" />
+                  <upperBound>
+                    <literalInteger Id="38441055-3ebc-420f-8129-a4b712256428" name="2147483647" value="2147483647">
+                      <elementDefinition Id="5a2c0f4a-c89d-4f3e-bf6f-dfd89446a43e" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </callActionHasResults>
+              <callActionHasResults>
+                <outputPin Id="c9e5c89d-c3a7-4f92-add3-8d54da15efb9" name="Properties Set" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="5b51795f-8bc0-4caf-a437-ae0ff5029626" />
+                  <objectFlowTargets>
+                    <objectFlow Id="13f8b52b-8995-4e2c-9d18-329a26ddef02" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <opaqueActionMoniker Id="b58541c6-c90e-4995-90b2-ab8d34d6a5de" LastKnownName="Assign Properties Set to Item" />
+                      <elementDefinition Id="f043c06f-252d-4d07-87ad-0ec1a42f9eaf" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="0d5e0e87-daca-48d9-82c5-9bad8629203b" name="2147483647" value="2147483647">
+                      <elementDefinition Id="330da7b6-fb40-42c5-af98-81425b762452" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </callActionHasResults>
+            </pins>
+          </callOperationAction>
+          <opaqueAction Id="b58541c6-c90e-4995-90b2-ab8d34d6a5de" name="Assign Properties Set to Item" isLeaf="false">
+            <elementDefinition Id="60485c2f-e9fb-4aec-8a87-41eaa5e991ff" />
+            <objectFlowTargets>
+              <objectFlow Id="d0417a91-229f-41c2-bc74-00baab933aaa" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="f4bb2dac-4886-470e-aa0d-e81672ab4f1f" LastKnownName="Item with defined Properties Set" />
+                <elementDefinition Id="14d9eb50-ca67-4a83-9adb-ef48561f73e1" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="f4bb2dac-4886-470e-aa0d-e81672ab4f1f" name="Item with defined Properties Set" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="71c8d8c5-22f8-4416-925f-29eb403a42c8" />
+            <objectFlowTargets>
+              <objectFlow Id="024d12f9-d4d0-4a28-b556-f12e2973e8be" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <activityFinalNodeMoniker Id="5454e81b-7c52-4fa5-8919-97cb19ed26dd" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="f098fed6-a639-4630-a59a-47b160cba64d" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="ac3b0a4d-5520-4d59-ab34-6631d1387891" name="2147483647" value="2147483647">
+                <elementDefinition Id="e434d51c-6baf-401d-9c69-5936e449d4ed" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <activityFinalNode Id="5454e81b-7c52-4fa5-8919-97cb19ed26dd" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="95a45474-face-4af6-9376-141b89b37654" />
+          </activityFinalNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
